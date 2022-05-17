@@ -6,6 +6,8 @@ Parie K
 
 Sophia S
 
+Kashvi S
+
 Stage 1: Proposal
 
 A proposal for a project requires at least three students, with at least one student from each block! (This will require you to utilize GitHub and learn about branches, commits, and pulls.) The proposal must address each of the following:
@@ -31,8 +33,10 @@ Making shelter: if wood then you make it through the night, else you lose resour
 
 Wild Animals: if have more than 5 food resources player is able to run quickly but they lose all 5 resources, else they die
 
+Class Main: 
+
 Class Player: resource method, attributes of player,
 
-Class Game: guessing game method, obstacle methods, keeps track of number of days,
+Class Island: guessing game method, obstacle methods, keeps track of number of days,
 
  Anticipated file structure (i.e. what classes will you write, where will the main method exist? Show me that you have thought enough about this problem or project to begin to recognize some of the complexity you will need to account for.
