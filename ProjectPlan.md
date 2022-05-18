@@ -20,21 +20,19 @@ Methods include:
 - Player Class
    - BuildCharacter (player constructor)
    - TrackResource (keeps track of all the player's resources: food (int), water (int), clothes (int), wood (int), blanket (boolean), knife (boolean)) 
-      -> food and water are initially randomized 
+   		- food and water are initially randomized 
       
 - Island Class
    - All obstacle methods (after each succesfully completed one: add food +2)
-      -> MakeShelter
-      -> WildAnimals (checks if food resources are < 5, if yes, then they die (unable to run away fast enough). if food >= 5, then all food is lost but game continues)
-      -> TempCheck (not sure on this one) 
-      -> FindWater (guessing num game to gain water)
-      -> BuildShelter (checks wood, if there is a sufficient amount no resources will be lost. if there isn't you will continue to lose some)
+   		- MakeShelter
+   		- WildAnimals (checks if food resources are < 5, if yes, then they die (unable to run away fast enough). if food >= 5, then all food is lost but game continues)
+   		- TempCheck (not sure on this one) 
+    	- FindWater (guessing num game to gain water)
+   		- BuildShelter (checks wood, if there is a sufficient amount no resources will be lost. if there isn't you will continue to lose some)
    - DayTracker 
-      -> three options: (1) timer (end day at certain time with ten second warming), (2) randomized obstacles (after certain randomized amount of obstacles in a day, day ends), (3) set obstacles (after same daily amount of obstacles, day ends) 
-      -> update the resources (food -5, water -3) based on BuildShelter method
+     	- three options: (1) timer (end day at certain time with ten second warming), (2) randomized obstacles (after certain randomized amount of obstacles in a day, day ends), (3) set obstacles (after same daily amount of obstacles, day ends) 
+     	- update the resources (food -5, water -3) based on BuildShelter method
   
-
-
 edits required: 
 
 Temp Method: if random temp is above 110*, and wearing extra layer of clothes, you will lose 10 water resources; if random temp is below 32*, and wearing no exta layers, you will lose 10 water and 10 food resources.
