@@ -2,6 +2,7 @@ public class Island extends Player(){
   private int days;
   private boolean health;
   public Island(String name){
+    super(food, water, wood, blanket, knife, name);
     
    
     
