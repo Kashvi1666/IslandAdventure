@@ -1,6 +1,8 @@
 public class Island extends Player(){
-  private int days;
-  public Island(
+  private int day = 1;
+  private booelan health; 
+  public Island(){
+  }
     
     
    
