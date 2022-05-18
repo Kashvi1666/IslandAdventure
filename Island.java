@@ -1,19 +1,6 @@
 public class Island extends Player(){
   private int days;
-  private boolean health;
-  public Island(String name){
-    super(food, water, wood, blanket, knife, name);
-    
-   
-    
-   
-    
-    
-    
-    
-    
-    
-    
+  public Island{
     
     public String wildAnimals(){
       System.out.println("oh no! wild animals are chasing you. if you have enough food, you will live.")
@@ -27,8 +14,13 @@ public class Island extends Player(){
       }  
     }
 
-    public String findWater(){
-      System.out.println("you are running low on water!")
-      
-    }   
+    public String findWater(int guess){
+      //in the dayTracker method, at the end of the day check water resources. call this method if user is low
+      System.out.println("you are running low on water! play this number guessing game to get more for tonight.")
+      System.out.println("you have three guesses, pick any whole number between 1 & 20); 
+      int guessNumber = (Math.random()*15)+5; 
+      //add scanner later to finish this
+    } 
+                         
+  }   
 }
