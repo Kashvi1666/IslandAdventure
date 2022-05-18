@@ -14,9 +14,12 @@ public class Island extends Player(){
     
     
   
-public void foodCheck(){
+public int foodCheck(){
   while (health == true){
-    if amountFood < 5;
-    heatlh = false;
-  } 
+    if (amountFood < 5){
+      heatlh = false;
+    }
+    else {
+      return amountFood;
+    } 
 }
