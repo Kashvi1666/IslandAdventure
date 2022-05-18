@@ -17,7 +17,7 @@ public class Island extends Player(){
     public String findWater(int guess){
       //in the dayTracker method, at the end of the day check water resources. call this method if user is low
       System.out.println("you are running low on water! play this number guessing game to get more for tonight.")
-      System.out.println("you have three guesses, pick any whole number between 1 & 20); 
+      System.out.println("you have three guesses, pick any whole number between 1 & 20"); 
       int guessNumber = (Math.random()*15)+5; 
       //add scanner later to finish this
     } 
