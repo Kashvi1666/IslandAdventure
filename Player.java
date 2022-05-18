@@ -15,13 +15,12 @@ public class Player {
    
    public Player(String playerName){
       name = playerName; 
-   }
-   
-   public void trackResources(){
       food = (Math.random()*15)+5; 
       water = (Math.random()*15)+5; 
       blanket = true; 
       knife = true; 
       wood = (Math.random()*15)+5; 
-   } 
+   }
+   
+  
 } 
