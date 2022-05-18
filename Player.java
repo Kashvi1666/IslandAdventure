@@ -6,12 +6,12 @@ import java.util.*;
 
 public class Player { 
    
-   int food; 
-   int water; 
-   int wood; 
-   boolean blanket; 
-   boolean knife; 
-   String name; 
+   private int food; 
+   private int water; 
+   private int wood; 
+   private boolean blanket; 
+   private boolean knife; 
+   private String name; 
    
    public Player(String playerName){
       name = playerName; 
