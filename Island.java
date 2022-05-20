@@ -1,11 +1,11 @@
 
 public class Island extends Player(){
-  private int days;
+  private int numDays;
   public Island{
     
     public String wildAnimals(){
       System.out.println("oh no! wild animals are chasing you. if you have enough food, you will live.")
-      if (food < 5){
+      if (numFood < 5){
         return "...you have died, you did not have enough food for energy to run from wild animals";
         health == false; 
       } 
@@ -21,49 +21,28 @@ public class Island extends Player(){
       System.out.println("you have three guesses, pick any whole number between 1 & 20"); 
       int guessNumber = (Math.random()*15)+5; 
       //add scanner later to finish this
+      for (int i = 0; i <= 3; i++){
+	      if (guessNumber == guess){
+		      numWater += 5; 
+		      return("nice job! u guessed right, you have " + numWater + " water.");
+	      }
+	      else {
+		      System.out.println("guess again"); 
+	      } 
+      } 
+      return "sorry! u are out of guesses. u currently have " + numWater + " water."); 
     } 
     
     public String daily(){
-	    if numDays = 20{
+	    numFood = numFood - 2; 
+	    numWater = numWater - 2; 
+	    if numDays = 20 {
 		    System.out.println(“A rescue boat has come!”);
 	    }
-	    if numDays != 20{
+	    if numDays != 20 {
 		    numDays++;
 		  }
 	    return numDays;
     }                  
-	  
-	 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  public int getNumDays(){
-		return numDays;
-	  }
-
-	public int getnumFood(){
-		return numFood;
-	}
-
-	public int getNumWater(){
-		return numWater;
-	}
-
-	public boolean getBlanket(){
-		return blanket;
-	}
-
-	public boolean getKnife(){
-		return knife;
-	}
-
-	public boolean getWood(){
-		return wood;
-	}
-
   }   
 }
