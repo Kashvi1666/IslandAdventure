@@ -7,6 +7,7 @@ public class Main{
     System.out.println("Please enter your username: ");
     String username = myObj.nextLine();
     System.out.println("Welcome to our Island Game: " + username);
+    System.out.println("In this game, you wil be faced with many obstacles and challenges that you will have to overcome. You will be given a random number of resources and have to make hard descisions to survive. If you live for two weeks, then you win! I wish you luck");
     
   }
 }
