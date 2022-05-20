@@ -5,16 +5,15 @@
 import java.util.*; 
 
 public class Player { 
-   
-   private int numDays;
+	private int numDays;
 	private int numFood;
 	private int numWater;
 	private boolean blanket;
 	private boolean knife; 
-	private int wood; 
-   private String name; 
+	private boolean wood; 
+  private String name; 
    
-   public Player(String playerName){
+  public Player(String playerName){
       name = playerName; 
       numFood = (Math.random()*15)+5; 
       numWater = (Math.random()*15)+5; 
@@ -22,6 +21,4 @@ public class Player {
       knife = true; 
       wood = (Math.random()*15)+5; 
    }
-
-	} 
 } 
