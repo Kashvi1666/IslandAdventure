@@ -5,6 +5,6 @@ public class Main{
     
     Scanner myObj = new Scanner(System.in);
     System.out.println("Please enter your username: ");
-    String username = myObj.nextline();
-    System.out.println(
+    String username = myObj.nextLine();
+
 
