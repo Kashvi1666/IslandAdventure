@@ -11,7 +11,7 @@ public class Player {
 	private int numWater;
 	private boolean blanket;
 	private boolean knife; 
-	private boolean wood; 
+	private int wood; 
    private String name; 
    
    public Player(String playerName){
