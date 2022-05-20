@@ -21,6 +21,15 @@ public class Island extends Player(){
       int guessNumber = (Math.random()*15)+5; 
       //add scanner later to finish this
     } 
-                         
+    
+    public String daily(){
+	    if numDays = 20{
+		    System.out.println(“A rescue boat has come!”);
+	    }
+	    if numDays != 20{
+		    numDays++;
+		  }
+	    return numDays;
+    }                  
   }   
 }
