@@ -54,8 +54,10 @@ public class Island extends Player(){
 	  
 	  
 	  
-	  
-	  public int getNumDays(){
+	public String getResources(){
+		System.out.print("It is the " + numDays + "day. You have " + numFood + " resources and " + numWater + " water resources. Do you have a blanket? " + blanket + " Do you have a knife " + knife + " You have " + wood + " resources."); 
+
+	public int getNumDays(){
 		return numDays;
 	  }
 
