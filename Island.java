@@ -57,6 +57,17 @@ public class Island extends Player(){
 	    
     } 
     
+    public String makeShelter(){
+    	if (wood >= 10){
+		return "you can build a shelter";
+		wood -=5;
+	}
+	else{
+		return "you don't have enough wood for a shelter, you will be cold tonight"
+		water--;
+		food--;
+	}
+    }
     	
     }
   }   
