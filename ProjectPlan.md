@@ -24,7 +24,7 @@ Methods include:
       
 - Island Class
    - All obstacle methods (after each succesfully completed one: add food +2)
-   		- JungleHike (gains wood, guess word game (ex: le*o* is lemon) 
+   		- JungleHike (gains wood, guess word game (ex: le_o_ is lemon) 
    		- WildAnimals (checks if food resources are < 5, if yes, then they die (unable to run away fast enough). if food >= 5, then all food is lost but game continues)
    		- TempCheck (not sure on this one) 
     	- FindWater (guessing num game to gain water)
