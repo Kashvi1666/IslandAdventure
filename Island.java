@@ -18,7 +18,7 @@ public class Island extends Player(){
 
     public String findWater(int guess){
       //in the dayTracker method, at the end of the day check water resources. call this method if user is low
-      System.out.println("You are running low on water! Play this number guessing game to replenish.")
+      System.out.println("You are running low on water! Play this number guessing game to replenish.");
       System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
       int guessNumber = (Math.random()*15)+5; 
       int guess = myObj.nextLine();
@@ -38,21 +38,20 @@ public class Island extends Player(){
 	    }
     } 
     
+    public String findFood(int guess){
+	    System.out.println("You are running low on food! Play this number guessing game to replenish.");
+	    System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
+	    String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
+    } 
+	  
     //gains wood, guess word game (ex: le_o_ is lemon)
     public String jungleHike(){ 
 	    //random array of words
-	    ArrayList<Type> guessingWords = new ArrayList<Type>();
-	    	guessingWords.add("sand");
-	    	guessingWords.add("umbrella");
-	    	guessingWords.add("papaya");
-	    	guessingWords.add("tree");
-	    	guessingWords.add("beach");
-	    
+	    [purple, lemon, papaya, tree, beach] 
 	    //random selection 
 	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
 	    //save the changed word in a new variable 
 	    //print out, make them guess using string.equals in a for loop for three times 
-	    //remove word from array so its not repeated
     } 
 
     //randomly decides obstacles for the day 
