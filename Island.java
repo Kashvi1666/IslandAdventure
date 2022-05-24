@@ -38,9 +38,14 @@ public class Island extends Player(){
 	    }
     } 
     
-    //gains wood, guess word game (ex: le_o_ is lemon
+    //gains wood, guess word game (ex: le_o_ is lemon)
     public String jungleHike(){ 
-	    
+	    //random array of words
+	    [purple, lemon, papaya, tree, beach] 
+	    //random selection 
+	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
+	    //save the changed word in a new variable 
+	    //print out, make them guess using string.equals in a for loop for three times 
     } 
 
     //randomly decides obstacles for the day 
