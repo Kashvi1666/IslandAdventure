@@ -1,6 +1,7 @@
 
 public class Island extends Player(){
   private int numDays;
+  private int dailyMethods; 
   public Island{
     
     public String wildAnimals(){
@@ -31,44 +32,54 @@ public class Island extends Player(){
 	      } 
       } 
       return "Sorry! You are out of guesses, you currently have " + numWater + " water."; 
+      if (numWater <= 0) || (numFood <= 0){
+		return "You ran out of resources, you died.";
+	        break; 
+	    }
     } 
     
-    public String dayTracker(){
-	    healthCheck(); 
-	    numFood = numFood - 2; 
-	    numWater = numWater - 2; 
-	    if numDays = 20 {
-		    System.out.println("A rescue boat has come!”);
-	    }
-	    if numDays != 20 {
-		    numDays++;
-		  }
-	    return "Days left: " + numDays;
-	    if (numWater <= 5) {
-		    findWater(); 
-	    } 
+    //gains wood, guess word game (ex: le_o_ is lemon
+    public String jungleHike(){ 
+	    
     } 
-	  
-    public String healthCheck(){
-	    if (numWater <= 0) || (numFood <= 0){
-		return "You are out of resources, you have died."; 
-		break;     
-	    } 	  
+
+    //randomly decides obstacles for the day 
+    public int chooseObstacles(){
 	    
     } 
     
-    public String makeShelter(){
-    	if (wood >= 10){
-		return "you can build a shelter";
-		wood -=5;
-	}
-	else{
-		return "you don't have enough wood for a shelter, you will be cold tonight"
-		water--;
-		food--;
-	}
-    }
-    	
-    }
+    //checks if game continues, updates day, starts new day 
+    public String dayTracker(){
+	    
+	    //checks life before continuing 
+	    healthCheck(); 
+	  
+	    if (numWater <= 0) || (numFood <= 0){
+		return "you ran out of resources, you died.";
+	        break; 
+	    }
+	    //updates resources 
+	    numFood = numFood - 2; 
+	    numWater = numWater - 2; 
+	    
+	    //choose methods to run on a day 
+	    int obstacleType = ; 
+	    
+	    
+	    
+	    //update days until 10 are completed 
+	    if numDays = 10 {
+		    System.out.println("A rescue boat has come!”);
+	    }
+	    if numDays != 10 {
+		    numDays++;
+		  }
+	    return "Days left: " + numDays;
+				       
+	    //water check, runs findWater method 		       
+	    if (numWater <= 5) {
+		    findWater(); 
+	    } 		        		      
+    }  
   }   
 }
