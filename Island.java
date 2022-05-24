@@ -54,6 +54,10 @@ public class Island extends Player(){
 		return "You are out of resources, you have died."; 
 		break;     
 	    } 	  
+	    
     } 
+    
+    	
+    }
   }   
 }
