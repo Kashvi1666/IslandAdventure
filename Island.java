@@ -58,6 +58,7 @@ public class Island extends Player(){
 
     //randomly decides obstacles for the day 
     public int chooseObstacles(){
+	   int c = Math.random()* 20;
 	    
     } 
     
