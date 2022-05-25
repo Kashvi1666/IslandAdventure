@@ -43,12 +43,28 @@ public class Island extends Player(){
     public String jungleHike(){ 
 	    //random array of words
 	    ArrayList<Type> guessingWords = new ArrayList<Type>();
-	    	guessingWords.add("sand");
-	    	guessingWords.add("umbrella");
-	    	guessingWords.add("papaya");
-	    	guessingWords.add("tree");
-	    	guessingWords.add("beach");
+	    	guessingWords.add("s_n_");
+	    	guessingWords.add("_m_re_la");
+	    	guessingWords.add("pa_ay_");
+	    	guessingWords.add("tr_e");
+	    	guessingWords.add("b_a_h");
 	    int x = Math.random()*5;
+	    String wordToGuess;
+	    if (x = 1){ 
+		    wordToGuess = array[1];
+	     }
+	    if (x = 2){ 
+		    wordToGuess = array[2];
+	     }
+	    if (x = 3){ 
+		    wordToGuess = array[3];
+	     }
+	    if (x = 4){ 
+		    wordToGuess = array[4];
+	     }
+	    if (x = 5){ 
+		    wordToGuess = array[5];
+	     }
 	    //random selection 
 	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
 	    //save the changed word in a new variable 
