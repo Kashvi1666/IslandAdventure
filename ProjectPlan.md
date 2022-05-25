@@ -25,14 +25,11 @@ Methods include:
 - Island Class
    - All obstacle methods (after each succesfully completed one: add food +2)
    		- JungleHike (gains wood, guess word game (ex: le_o_ is lemon) 
-   		- WildAnimals (checks if food resources are < 5, if yes, then they die (unable to run away fast enough). if food >= 5, then all food is lost but game continues)
+   		- WildAnimals (rock paper scissors to gain food or lose food (energy))
    		- TempCheck (not sure on this one) 
     	- FindWater (guessing num game to gain water)
    		- BuildShelter (checks wood, if there is a sufficient amount no resources will be lost. if there isn't you will continue to lose some)
    - DayTracker 
      	- three options: (1) timer (end day at certain time with ten second warming), (2) randomized obstacles (after certain randomized amount of obstacles in a day, day ends), (3) set obstacles (after same daily amount of obstacles, day ends) 
      	- update the resources (food -5, water -3) based on BuildShelter method
-  
-edits required: 
 
-Temp Method: if random temp is above 110*, and wearing extra layer of clothes, you will lose 10 water resources; if random temp is below 32*, and wearing no exta layers, you will lose 10 water and 10 food resources.
