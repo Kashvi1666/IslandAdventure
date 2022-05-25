@@ -65,6 +65,25 @@ public class Island extends Player(){
 	    if (x = 5){ 
 		    wordToGuess = array[5];
 	     }
+	    
+	    System.out.println("Your word is: " + wordToGuess + "please start guessing now");
+	    Scanner userGuess = new Scanner(System.in);
+	    // somehow make wordToGuess full actual word
+	    if ( wordToGuess == userGuess ){
+	    	System.out.println("good job you survived!");
+		water += 10;
+		food += 10;
+		wood += 10;
+	    }
+	    
+	    else{
+	    	System.out.print("rip you lost");
+		water -= 10;
+		food -= 10;
+		wood -= 10
+	    }
+	    
+	    
 	    //random selection 
 	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
 	    //save the changed word in a new variable 
