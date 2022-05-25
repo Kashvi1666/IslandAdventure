@@ -43,54 +43,107 @@ public class Island extends Player(){
     public String jungleHike(){ 
 	    //random array of words
 	    ArrayList<Type> guessingWords = new ArrayList<Type>();
-	    	guessingWords.add("s_n_");
-	    	guessingWords.add("_m_re_la");
-	    	guessingWords.add("pa_ay_");
-	    	guessingWords.add("tr_e");
-	    	guessingWords.add("b_a_h");
+	    	guessingWords.add("sand");
+	    	guessingWords.add("umbrella");
+	    	guessingWords.add("papaya");
+	    	guessingWords.add("tree");
+	    	guessingWords.add("beach");
 	    int x = Math.random()*5;
-	    String wordToGuess;
-	    if (x = 1){ 
-		    wordToGuess = array[1];
-	     }
-	    if (x = 2){ 
-		    wordToGuess = array[2];
-	     }
-	    if (x = 3){ 
-		    wordToGuess = array[3];
-	     }
-	    if (x = 4){ 
-		    wordToGuess = array[4];
-	     }
-	    if (x = 5){ 
-		    wordToGuess = array[5];
-	     }
-	    
-	    System.out.println("Your word is: " + wordToGuess + "please start guessing now");
-	    Scanner userGuess = new Scanner(System.in);
-	    // somehow make wordToGuess full actual word
-	    if ( wordToGuess == userGuess ){
-	    	System.out.println("good job you survived!");
-		water += 10;
-		food += 10;
-		wood += 10;
-	    }
-	    
-	    else{
-	    	System.out.print("rip you lost");
-		water -= 10;
-		food -= 10;
-		wood -= 10
-	    }
-	    
-	    
 	    //random selection 
 	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
 	    //save the changed word in a new variable 
 	    //print out, make them guess using string.equals in a for loop for three times 
 	    //remove word from array so its not repeated
     } 
-
+    
+    public String poisonBerries(){ 
+	    System.out.println("sorry! u have accidentally consumed toxic berries."); 
+	    System.out.println("play this trivia (get 4/6 questions right) to get the antidote, or else lose food and water!");
+            int points; 
+	    
+      //question one
+	    System.out.println("question 1: where do monkeys live? ");
+	    System.out.println("a) trees")
+            System.out.println("b) inside houses")
+	    System.out.println("c) ground level")
+            System.out.println("d) nests")
+	    String answer = myObj.nextLine()
+	    if (answer.equals("a")){
+		    System.out.println("true! next question"); 
+		    points++; 
+            else {
+		    System.out.println("false! sorry. next question");
+      //question two
+	    System.out.println("question 2: what color tree frog is most dangerous?")
+	    System.out.println("a) green")
+            System.out.println("b) black and yellow")
+	    System.out.println("c) orange spotted")
+            System.out.println("d) purple patched")		    
+	    String answer = myObj.nextLine()
+	    if (answer.equals("c")){
+		    System.out.println("true! next question"); 
+		    points++;
+            else {
+		    System.out.println("false! sorry. next question");
+       //question three
+            System.out.println("question 3: which plant is best for fevers?")
+	    System.out.println("a) lemon leaves")
+            System.out.println("b) elderflower")
+	    System.out.println("c) red ivy")
+            System.out.println("d) grass")		    
+	    String answer = myObj.nextLine()
+	    if (answer.equals("a")){
+		    System.out.println("true! next question"); 
+		    points++;
+            else {
+		    System.out.println("false! sorry. next question");
+        //question four
+            System.out.println("question 4: which edible fish is found close to shore?")
+	    System.out.println("a) rockfish")
+            System.out.println("b) salmon")
+	    System.out.println("c) orange roughy")
+            System.out.println("d) rainbow trout")		    
+	    String answer = myObj.nextLine()
+	    if (answer.equals("a")){
+		    System.out.println("true! next question"); 
+		    points++;
+            else {
+		    System.out.println("false! sorry. next question");
+	//question five
+            System.out.println("question 5: what should you do if you see a snake?")
+	    System.out.println("a) run backwards")
+            System.out.println("b) stand still")
+	    System.out.println("c) eat it")
+            System.out.println("d) step on it")		    
+	    String answer = myObj.nextLine()
+	    if (answer.equals("b")){
+		    System.out.println("true! next question"); 
+		    points++;
+            else {
+		    System.out.println("false! sorry. next question");
+	//question six
+            System.out.println("question 6: where is treasure usually hidden?")
+	    System.out.println("a) on the beach")
+            System.out.println("b) underneath the island")
+	    System.out.println("c) in a cave")
+            System.out.println("d) this island does not have treasure so the question is not applicable")		    
+	    String answer = myObj.nextLine()
+	    if (answer.equals("d")){
+		    System.out.println("true! next question"); 
+		    points++;
+            else {
+		    System.out.println("false! sorry.");
+	
+	    if (points >= 4){
+		    return "you passed! congrats!";
+	    }
+	    else{
+		    return "you failed. sorry."; 
+		    food -= 3; 
+		    water -= 3; 
+	    }
+    } 
+	    
     //randomly decides obstacles for the day 
     public int chooseObstacles(){
 	   int c = Math.random()* 20;
