@@ -6,9 +6,34 @@ public class Island extends Player(){
   public Island{
     
     public String wildAnimals(){
-      System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live.")
+      Scanner myObj = new Scanner(System.in);
+      System.out.println("Shoot: ");
+      String playerChoice = myObj.nextLine();
+	 
+      System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live.");
       if (numFood < 5){
-        return "You have died... You did not have enough food for energy to run from the wild animals.";
+	return "You do not have enough food for energy to run from the wild animals.";
+	return "Play rock, paper, scissors to win 5 food.";
+	
+	// SYLVIA IS CREATING AN ARRAY TO STORE ROCK PAPER AND SCISSOR SO THAT THE CONDITIONALS WORK
+	if (playerChoice.compareTo(computerChoice) == 0){
+        	System.out.println("You tied!");
+	if (playerChoice.equals("rock") && computerChoice.equals("paper")){
+		System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+	if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
+		System.out.println("You win!");
+		numFood += 5;
+	if (playerChoice.equals("paper") && computerChoice.equals("rock")){
+		System.out.println("You win!");
+		numFood += 5;
+	if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
+		System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+	if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
+		System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+	if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
+		System.out.println("You win!");
+		numFood += 5;
+        return "Thanks for playing!";
         health == false; 
       } 
       else {
@@ -55,98 +80,9 @@ public class Island extends Player(){
 	    //print out, make them guess using string.equals in a for loop for three times 
 	    //remove word from array so its not repeated
     } 
-    
-    public String poisonBerries(){ 
-	    System.out.println("sorry! u have accidentally consumed toxic berries."); 
-	    System.out.println("play this trivia (get 4/6 questions right) to get the antidote, or else lose food and water!");
-            int points; 
-	    
-      //question one
-	    System.out.println("question 1: where do monkeys live? ");
-	    System.out.println("a) trees")
-            System.out.println("b) inside houses")
-	    System.out.println("c) ground level")
-            System.out.println("d) nests")
-	    String answer = myObj.nextLine()
-	    if (answer.equals("a")){
-		    System.out.println("true! next question"); 
-		    points++; 
-            else {
-		    System.out.println("false! sorry. next question");
-      //question two
-	    System.out.println("question 2: what color tree frog is most dangerous?")
-	    System.out.println("a) green")
-            System.out.println("b) black and yellow")
-	    System.out.println("c) orange spotted")
-            System.out.println("d) purple patched")		    
-	    String answer = myObj.nextLine()
-	    if (answer.equals("c")){
-		    System.out.println("true! next question"); 
-		    points++;
-            else {
-		    System.out.println("false! sorry. next question");
-       //question three
-            System.out.println("question 3: which plant is best for fevers?")
-	    System.out.println("a) lemon leaves")
-            System.out.println("b) elderflower")
-	    System.out.println("c) red ivy")
-            System.out.println("d) grass")		    
-	    String answer = myObj.nextLine()
-	    if (answer.equals("a")){
-		    System.out.println("true! next question"); 
-		    points++;
-            else {
-		    System.out.println("false! sorry. next question");
-        //question four
-            System.out.println("question 4: which edible fish is found close to shore?")
-	    System.out.println("a) rockfish")
-            System.out.println("b) salmon")
-	    System.out.println("c) orange roughy")
-            System.out.println("d) rainbow trout")		    
-	    String answer = myObj.nextLine()
-	    if (answer.equals("a")){
-		    System.out.println("true! next question"); 
-		    points++;
-            else {
-		    System.out.println("false! sorry. next question");
-	//question five
-            System.out.println("question 5: what should you do if you see a snake?")
-	    System.out.println("a) run backwards")
-            System.out.println("b) stand still")
-	    System.out.println("c) eat it")
-            System.out.println("d) step on it")		    
-	    String answer = myObj.nextLine()
-	    if (answer.equals("b")){
-		    System.out.println("true! next question"); 
-		    points++;
-            else {
-		    System.out.println("false! sorry. next question");
-	//question six
-            System.out.println("question 6: where is treasure usually hidden?")
-	    System.out.println("a) on the beach")
-            System.out.println("b) underneath the island")
-	    System.out.println("c) in a cave")
-            System.out.println("d) this island does not have treasure so the question is not applicable")		    
-	    String answer = myObj.nextLine()
-	    if (answer.equals("d")){
-		    System.out.println("true! next question"); 
-		    points++;
-            else {
-		    System.out.println("false! sorry.");
-	
-	    if (points >= 4){
-		    return "you passed! congrats!";
-	    }
-	    else{
-		    return "you failed. sorry."; 
-		    food -= 3; 
-		    water -= 3; 
-	    }
-    } 
-	    
+
     //randomly decides obstacles for the day 
     public int chooseObstacles(){
-	   int c = Math.random()* 20;
 	    
     } 
     
