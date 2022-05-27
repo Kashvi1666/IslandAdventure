@@ -16,8 +16,13 @@ public class Island extends Player(){
       if (numFood < 5){
 	return "You do not have enough food for energy to run from the wild animals.";
 	return "Play rock, paper, scissors to win 5 food.";
-	
+      }
 	// SYLVIA IS CREATING AN ARRAY TO STORE ROCK PAPER AND SCISSOR SO THAT THE CONDITIONALS WORK
+	ArrayList<Type> computerChoice = new ArrayList<Type>();
+	    	computerChoice.add("rock");
+	    	computerChoice.add("paper");
+	    	computerChoice.add("scissor");
+	      
 	if (playerChoice.compareTo(computerChoice) == 0){
         	System.out.println("You tied!");
 	if (playerChoice.equals("rock") && computerChoice.equals("paper")){
