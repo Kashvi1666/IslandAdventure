@@ -7,6 +7,13 @@ public class Island extends Player(){
   private int dailyMethods; 
 	
   public Island{
+    public String getResources(){
+    	System.out.print("It is the " + numDays + "day. You have " + numFood + " resources and " + numWater + " water resources. Do you have a blanket? " + blanket + " Do you have a knife " + knife + " You have " + wood + " resources."); 
+
+    }
+    public int getNumDays(){
+	return numDays;
+    }
     public String wildAnimals(){
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
