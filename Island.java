@@ -41,29 +41,7 @@ public class Island extends Player(){
         food = 0; 
       }  
     }
-
-    public String findWater(int guess){
-      //in the dayTracker method, at the end of the day check water resources. call this method if user is low
-      System.out.println("You are running low on water! Play this number guessing game to replenish.")
-      System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
-      int guessNumber = (Math.random()*15)+5; 
-      int guess = myObj.nextLine();
-      for (int i = 0; i <= 3; i++){
-	      if (guessNumber == guess){
-		      numWater += 5; 
-		      return "Nice job! You guessed right! You have " + numWater + " water.";
-	      }
-	      else {
-		      System.out.println("Guess again."); 
-	      } 
-      } 
-      return "Sorry! You are out of guesses, you currently have " + numWater + " water."; 
-      if (numWater <= 0) || (numFood <= 0){
-		return "You ran out of resources, you died.";
-	        break; 
-	    }
-    } 
-    
+  
     //gains wood, guess word game (ex: le_o_ is lemon)
     public String jungleHike(){ 
 	    //random array of words
@@ -196,11 +174,34 @@ public class Island extends Player(){
 	    }
     } 
 		    
-    //randomly decides obstacles for the day 
-    public int chooseObstacles(){
-	    
+    public String findWater(int guess){
+      //in the dayTracker method, at the end of the day check water resources. call this method if user is low
+      System.out.println("You are running low on water! Play this number guessing game to replenish.")
+      System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
+      int guessNumber = (Math.random()*15)+5; 
+      int guess = myObj.nextLine();
+      for (int i = 0; i <= 3; i++){
+	      if (guessNumber == guess){
+		      numWater += 5; 
+		      return "Nice job! You guessed right! You have " + numWater + " water.";
+	      }
+	      else {
+		      System.out.println("Guess again."); 
+	      } 
+      } 
+      return "Sorry! You are out of guesses, you currently have " + numWater + " water."; 
+      if (numWater <= 0) || (numFood <= 0){
+		return "You ran out of resources, you died.";
+	        break; 
+	    }
     } 
-    
+		    
+    public String findFood(int guess){
+	    System.out.println("You are running low on food! Play this number guessing game to replenish.");
+	    System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
+	    String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
+    } 
+		    
     //checks if game continues, updates day, starts new day 
     public String dayTracker(){
 	    
