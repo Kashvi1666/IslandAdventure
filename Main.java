@@ -11,6 +11,8 @@ public class Main{
     System.out.println("Below are the resources you have");
     Island.getResources();
     
+    String [] computerChoice = new String {“rock”, “paper”, “scissor”};
+    
     int day = 0;
     while(healthCheck() && day < 10){
       System.out.println("It is day: " + day);
