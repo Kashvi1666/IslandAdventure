@@ -17,7 +17,7 @@ public class Main{
       int count = 1; 
       while(count < 3){
         
-        int x = (int) ((Math.random() * 4) + 1);
+        int x = (int) ((Math.random() * 3) + 1);
         if(x = 1){
           wildAnimals();
           count ++;
@@ -26,20 +26,13 @@ public class Main{
           }
         }
         if(x = 2){
-          findWater();
-          count ++; 
-          if(!healthCheck()){
-            System.out.println("You have died! Game Over! :( ");
-          }
-        }
-        if(x = 3){
           jungleHike();
           count ++;
           if(!healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
-        if(x = 4){
+        if(x = 3){
           posionBerries(); 
           count ++;
            if(!healthCheck()){
@@ -53,6 +46,10 @@ public class Main{
       System.out.println("The day has ended");
       numFood = numFood - 2;
       numWater = numWater - 2;
+
+      if (findWater() <= 5){
+        findWater();
+      }
       System.out.println("you have " +  (10 - day) + " left");
       
       
