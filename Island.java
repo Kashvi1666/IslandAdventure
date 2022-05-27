@@ -1,12 +1,10 @@
 java.util.*;
 
 public class Island extends Player(){
-	
   private int numDays;
   private int dailyMethods; 
-	
   public Island{
-	  
+    
     public String wildAnimals(){
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
@@ -78,6 +76,26 @@ public class Island extends Player(){
 	    if (x == 9){ 
 		    wordToGuess = array[10];
 	     }
+	
+		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    		System.out.print(array[x]);
+
+    		String userInput = myObj.nextLine(); 
+		if (userinput == wordToGuess){
+			System.out.println("good job! you got it right! you get more food, water and wood!");
+			food +=10;
+			water+=10;
+			wood+=10;
+		}
+    		else{
+			System.out.print("wrong. you lost food water and wood resources");
+			food -=10;
+			water-=10;
+			wood-=10;
+		}
+		
+		
+		
 	    //random selection 
 	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
 	    //save the changed word in a new variable 
@@ -203,13 +221,39 @@ public class Island extends Player(){
 	    System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
 	    String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
     } 
-		    				       
-    public boolean healthCheck(){
+		    
+    //checks if game continues, updates day, starts new day 
+    public String dayTracker(){
+	    
+	    //checks life before continuing 
+	    healthCheck(); 
+	  
 	    if (numWater <= 0) || (numFood <= 0){
-		return false;
+		return "you ran out of resources, you died.";
 	        break; 
 	    }
-	    return true; 
-    } 
+	    //updates resources 
+	    numFood = numFood - 2; 
+	    numWater = numWater - 2; 
+	    
+	    //choose methods to run on a day 
+	    int obstacleType = ; 
+	    
+	    
+	    
+	    //update days until 10 are completed 
+	    if numDays = 10 {
+		    System.out.println("A rescue boat has come!”);
+	    }
+	    if numDays != 10 {
+		    numDays++;
+		  }
+	    return "Days left: " + numDays;
+				       
+	    //water check, runs findWater method 		       
+	    if (numWater <= 5) {
+		    findWater(); 
+	    } 		        		      
+    }  
   }   
 }
