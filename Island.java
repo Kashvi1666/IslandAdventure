@@ -18,6 +18,7 @@ public class Island extends Player(){
 	return "Play rock, paper, scissors to win 5 food.";
 	
 	// SYLVIA IS CREATING AN ARRAY TO STORE ROCK PAPER AND SCISSOR SO THAT THE CONDITIONALS WORK
+	String [] computerChoice = { “rock”, “paper”, “scissor” };
 	if (playerChoice.compareTo(computerChoice) == 0){
         	System.out.println("You tied!");
 	if (playerChoice.equals("rock") && computerChoice.equals("paper")){
