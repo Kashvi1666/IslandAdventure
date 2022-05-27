@@ -203,33 +203,7 @@ public class Island extends Player(){
 	    System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
 	    String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
     } 
-		    
-    //checks if game continues, updates day, starts new day 
-    public String dayTracker(){
-	    
-	    //updates resources 
-	    numFood = numFood - 2; 
-	    numWater = numWater - 2; 
-	    
-	    //choose methods to run on a day 
-	    int obstacleType = ; 
-	    
-	    
-	    
-	    //update days until 10 are completed 
-	    if numDays = 10 {
-		    System.out.println("A rescue boat has come!”);
-	    }
-	    if numDays != 10 {
-		    numDays++;
-		  }
-	    return "Days left: " + numDays;
-				       
-	    //water check, runs findWater method 		       
-	    if (numWater <= 5) {
-		    findWater(); 
-	    } 		        		      
-    } 
+		    				       
     public boolean healthCheck(){
 	    if (numWater <= 0) || (numFood <= 0){
 		return false;
