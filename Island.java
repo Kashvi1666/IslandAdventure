@@ -81,7 +81,7 @@ public class Island extends Player(){
 	    //remove word from array so its not repeated
     } 
 
-        public String poisonBerries(){ 
+    public String poisonBerries(){ 
 	    System.out.println("sorry! u have accidentally consumed toxic berries."); 
 	    System.out.println("play this trivia (get 4/6 questions right) to get the antidote, or else lose food and water!");
             int points; 
