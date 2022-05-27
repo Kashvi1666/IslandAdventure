@@ -11,8 +11,9 @@ public class Main{
     System.out.println("Below are the resources you have);
     Island.getResources();
     
+    int day = 0;
     int count = 1; 
-    while(healthCheck()){
+    while(healthCheck() && day < 10){
       System.out.println("It is day: " + getNumDays());
       while(count < 3){
         
@@ -20,32 +21,46 @@ public class Main{
         if(x = 1){
           wildAnimals();
           count ++;
+          if(!healthCheck()){
+            System.out.println("You have died! Game Over! :( ");
+          }
         }
         if(x = 2){
           findWater();
           count ++; 
+          if(!healthCheck()){
+            System.out.println("You have died! Game Over! :( ");
+          }
         }
         if(x = 3){
           jungleHike();
           count ++;
+          if(!healthCheck()){
+            System.out.println("You have died! Game Over! :( ");
+          }
         }
         if(x = 4){
           posionBerries(); 
           count ++;
+           if(!healthCheck()){
+            System.out.println("You have died! Game Over! :( ");
+           }
         }
 
      }
      if (count = 2){
+      day ++; 
       System.out.println("The day has ended");
       numFood = numFood - 2;
       numWater = numWater - 2;
-      System.out.println("you have " +  (10 - getNumDays()) + " left");
+      System.out.println("you have " +  (10 - day) + " left");
+      
       
      }     
     
     
   }
-  if(!healthCheck()){
+  
    
   }
 }
