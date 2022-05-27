@@ -1,10 +1,12 @@
 java.util.*;
 
 public class Island extends Player(){
+	
   private int numDays;
   private int dailyMethods; 
+	
   public Island{
-    
+	  
     public String wildAnimals(){
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
@@ -76,26 +78,6 @@ public class Island extends Player(){
 	    if (x == 9){ 
 		    wordToGuess = array[10];
 	     }
-	
-		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-    		System.out.print(array[x]);
-
-    		String userInput = myObj.nextLine(); 
-		if (userinput == wordToGuess){
-			System.out.println("good job! you got it right! you get more food, water and wood!");
-			food +=10;
-			water+=10;
-			wood+=10;
-		}
-    		else{
-			System.out.print("wrong. you lost food water and wood resources");
-			food -=10;
-			water-=10;
-			wood-=10;
-		}
-		
-		
-		
 	    //random selection 
 	    //random index remove letters (take lenth of word, randomly selected index for 3 letters and then replace with _)
 	    //save the changed word in a new variable 
@@ -121,8 +103,10 @@ public class Island extends Player(){
 	    if (answer.equals("a")){
 		    System.out.println("true! next question"); 
 		    points++; 
+	    }		    
             else {
 		    System.out.println("false! sorry. next question");
+	    }		    
       //question two
 	    System.out.println("question 2: what color tree frog is most dangerous?")
 	    System.out.println("a) green")
@@ -133,8 +117,10 @@ public class Island extends Player(){
 	    if (answer.equals("c")){
 		    System.out.println("true! next question"); 
 		    points++;
+	    }		    
             else {
 		    System.out.println("false! sorry. next question");
+	    }		    
        //question three
             System.out.println("question 3: which plant is best for fevers?")
 	    System.out.println("a) lemon leaves")
@@ -145,8 +131,10 @@ public class Island extends Player(){
 	    if (answer.equals("a")){
 		    System.out.println("true! next question"); 
 		    points++;
+	    }		    
             else {
 		    System.out.println("false! sorry. next question");
+	    }		    
         //question four
             System.out.println("question 4: which edible fish is found close to shore?")
 	    System.out.println("a) rockfish")
@@ -157,8 +145,10 @@ public class Island extends Player(){
 	    if (answer.equals("a")){
 		    System.out.println("true! next question"); 
 		    points++;
+	    }		    
             else {
 		    System.out.println("false! sorry. next question");
+	    }		    
 	//question five
             System.out.println("question 5: what should you do if you see a snake?")
 	    System.out.println("a) run backwards")
@@ -169,8 +159,10 @@ public class Island extends Player(){
 	    if (answer.equals("b")){
 		    System.out.println("true! next question"); 
 		    points++;
+	    }
             else {
 		    System.out.println("false! sorry. next question");
+	    }
 	//question six
             System.out.println("question 6: where is treasure usually hidden?")
 	    System.out.println("a) on the beach")
@@ -181,9 +173,10 @@ public class Island extends Player(){
 	    if (answer.equals("d")){
 		    System.out.println("true! next question"); 
 		    points++;
+	    }		    
             else {
 		    System.out.println("false! sorry.");
-
+	    }
 	    if (points >= 4){
 		    return "you passed! congrats!";
 	    }
@@ -221,39 +214,13 @@ public class Island extends Player(){
 	    System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
 	    String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
     } 
-		    
-    //checks if game continues, updates day, starts new day 
-    public String dayTracker(){
-	    
-	    //checks life before continuing 
-	    healthCheck(); 
-	  
+		    				       
+    public boolean healthCheck(){
 	    if (numWater <= 0) || (numFood <= 0){
-		return "you ran out of resources, you died.";
+		return false;
 	        break; 
 	    }
-	    //updates resources 
-	    numFood = numFood - 2; 
-	    numWater = numWater - 2; 
-	    
-	    //choose methods to run on a day 
-	    int obstacleType = ; 
-	    
-	    
-	    
-	    //update days until 10 are completed 
-	    if numDays = 10 {
-		    System.out.println("A rescue boat has come!”);
-	    }
-	    if numDays != 10 {
-		    numDays++;
-		  }
-	    return "Days left: " + numDays;
-				       
-	    //water check, runs findWater method 		       
-	    if (numWater <= 5) {
-		    findWater(); 
-	    } 		        		      
-    }  
+	    return true; 
+    } 
   }   
 }
