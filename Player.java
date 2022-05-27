@@ -5,7 +5,6 @@
 import java.util.*; 
 
 public class Player { 
-	private int numDays;
 	private int numFood;
 	private int numWater;
 	private boolean blanket;
