@@ -4,7 +4,6 @@ public class Island extends Player(){
   private int numDays;
   private int dailyMethods; 
   public Island{
-    
     public String wildAnimals(){
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
@@ -200,22 +199,13 @@ public class Island extends Player(){
     
     //checks if game continues, updates day, starts new day 
     public String dayTracker(){
-	    
-	    //checks life before continuing 
-	    healthCheck(); 
-	  
-	    if (numWater <= 0) || (numFood <= 0){
-		return "you ran out of resources, you died.";
-	        break; 
-	    }
 	    //updates resources 
 	    numFood = numFood - 2; 
 	    numWater = numWater - 2; 
 	    
-	    //choose methods to run on a day 
+	    //choose two methods to run on a day 
 	    int obstacleType = ; 
-	    
-	    
+
 	    
 	    //update days until 10 are completed 
 	    if numDays = 10 {
@@ -231,5 +221,13 @@ public class Island extends Player(){
 		    findWater(); 
 	    } 		        		      
     }  
+    public boolean healthCheck(){
+	   //checks life before continuing 
+	    if (numWater <= 0) || (numFood <= 0){
+		return false; 
+		break; 
+	    } 
+	    return true; 
+    } 
   }   
 }
