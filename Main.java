@@ -12,9 +12,9 @@ public class Main{
     Island.getResources();
     
     int day = 0;
-    int count = 1; 
     while(healthCheck() && day < 10){
-      System.out.println("It is day: " + getNumDays());
+      System.out.println("It is day: " + day);
+      int count = 1; 
       while(count < 3){
         
         int x = (int) ((Math.random() * 4) + 1);
@@ -61,6 +61,9 @@ public class Main{
     
   }
   
+  if(day = 10){
+    System.out.println("A rescue boat has come! You have survived");
+  }
    
   }
 }
