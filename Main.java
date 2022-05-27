@@ -11,24 +11,42 @@ public class Main{
     System.out.println("Below are the resources you have);
     Island.getResources();
     
-    
-    while(healthCheck() == false){
+    int count = 1; 
+    while(healthCheck()){
       System.out.println("It is day: " + getNumDays());
-      int x = (int) ((Math.random() * 4) + 1);
-      if(x = 1){
-        wildAnimals();
-      }
-      if(x = 2){
-        findWater();
-      }
-      if(x = 3){
-        jungleHike();
-      }
-      if(x = 4){
-        posionBerries(); 
-      }
+      while(count < 3){
+        
+        int x = (int) ((Math.random() * 4) + 1);
+        if(x = 1){
+          wildAnimals();
+          count ++;
+        }
+        if(x = 2){
+          findWater();
+          count ++; 
+        }
+        if(x = 3){
+          jungleHike();
+          count ++;
+        }
+        if(x = 4){
+          posionBerries(); 
+          count ++;
+        }
+
+     }
+     if (count = 2){
+      System.out.println("The day has ended");
+      numFood = numFood - 2;
+      numWater = numWater - 2;
+      System.out.println("you have " +  (10 - getNumDays()) + " left");
+      
+     }     
     
     
+  }
+  if(!healthCheck()){
+   
   }
 }
 
