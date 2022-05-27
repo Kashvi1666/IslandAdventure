@@ -50,7 +50,7 @@ public class Main{
       if (findWater() <= 5){
         findWater();
       }
-      System.out.println("you have " +  (10 - day) + " left");
+
       
       
      }     
