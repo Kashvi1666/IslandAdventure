@@ -1,10 +1,12 @@
 java.util.*;
 
 public class Island extends Player(){
+	
   private int numDays;
   private int dailyMethods; 
+	
   public Island{
-    
+	  
     public String wildAnimals(){
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
@@ -205,13 +207,6 @@ public class Island extends Player(){
     //checks if game continues, updates day, starts new day 
     public String dayTracker(){
 	    
-	    //checks life before continuing 
-	    healthCheck(); 
-	  
-	    if (numWater <= 0) || (numFood <= 0){
-		return "you ran out of resources, you died.";
-	        break; 
-	    }
 	    //updates resources 
 	    numFood = numFood - 2; 
 	    numWater = numWater - 2; 
@@ -234,6 +229,13 @@ public class Island extends Player(){
 	    if (numWater <= 5) {
 		    findWater(); 
 	    } 		        		      
-    }  
+    } 
+    public boolean healthCheck(){
+	    if (numWater <= 0) || (numFood <= 0){
+		return false;
+	        break; 
+	    }
+	    return true; 
+    } 
   }   
 }
