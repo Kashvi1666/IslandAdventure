@@ -8,13 +8,12 @@ public class Island2{
    public int wood; 
    public String name; 
    
-   public Island2(String playerName, int days, int daily){
+   public Island2(String playerName){
       name = playerName; 
       numFood = (int)(Math.random()*15)+5; 
       numWater = (int)(Math.random()*15)+5; 
       wood = (int)(Math.random()*15)+5; 
-      numDays = days;
-      dailyMethods = daily;
+
    }
      
    public String wildAnimals(){
