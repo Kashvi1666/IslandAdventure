@@ -19,21 +19,21 @@ public class Main{
       while(count < 3){
         
         int x = (int) ((Math.random() * 3) + 1);
-        if(x = 1){
+        if(x == 1){
           wildAnimals();
           count ++;
           if(!healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
-        if(x = 2){
+        if(x == 2){
           jungleHike();
           count ++;
           if(!healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
-        if(x = 3){
+        if(x == 3){
           posionBerries(); 
           count ++;
            if(!healthCheck()){
@@ -42,7 +42,7 @@ public class Main{
         }
 
      }
-     if (count = 2){
+     if (count == 2){
       day ++; 
       System.out.println("The day has ended");
       numFood = numFood - 2;
