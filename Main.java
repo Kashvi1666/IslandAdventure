@@ -11,6 +11,7 @@ public class Main{
     System.out.println("In this game, you wil be faced with many obstacles and challenges that you will have to overcome. You will be given a random number of resources and have to make hard descisions to survive. If you live for 10 days, then you win! I wish you luck on your island adventure!");
     System.out.println("Below are the resources you have");
     getResources();
+    Island2 island = new Island2(username);
     
     int day = 0;
     while(Island2.healthCheck() && day < 10){
@@ -45,8 +46,8 @@ public class Main{
      if (count == 2){
       day ++; 
       System.out.println("The day has ended");
-      numFood = numFood - 2;
-      numWater = numWater - 2;
+      island.numFood = island.numFood - 2;
+      island.numWater = island.numWater - 2;
 
       if (findWater() <= 5){
         findWater();
