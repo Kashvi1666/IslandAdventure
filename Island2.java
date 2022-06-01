@@ -73,7 +73,7 @@ public class Island2{
    //gains wood, guess word game (ex: le_o_ is lemon)
    public String jungleHike(){ 
 	   //random array of words
-	   ArrayList<Type> guessingWords = new ArrayList<Type>();
+	   ArrayList<String> guessingWords = new ArrayList<String>();
 		   guessingWords.add("s_n_");
    	   guessingWords.add("sand");
     	   guessingWords.add("_m_re_la");
