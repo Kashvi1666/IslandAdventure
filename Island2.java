@@ -21,50 +21,49 @@ public class Island2{
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
       String playerChoice = myObj.nextLine();
-      System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live.");
-         
-      if (numFood < 5){
-	      return "You do not have enough food for energy to run from the wild animals.";
-	      return "Play rock, paper, scissors to win 5 food.";
+      System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live. Play rock, paper, scissors to win 5 food.");
 	      
-         ArrayList<String> computerChoice = new ArrayList<String>();
-         computerChoice.add("rock");
-         computerChoice.add("paper");
-         computerChoice.add("scissor");
-               
-         if (playerChoice.compareTo(computerChoice) == 0){
-        	   System.out.println("You tied!");
-         }
-	      if (playerChoice.equals("rock") && computerChoice.equals("paper")){
-		      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
-         }
-	      if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
-		      System.out.println("You win!");
-		      numFood += 5;
-         }
-	      if (playerChoice.equals("paper") && computerChoice.equals("rock")){
-		      System.out.println("You win!");
-		      numFood += 5;
-         }
-	      if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
-		      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
-         }
-	      if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
-		      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
-	      }
-         if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
-		      System.out.println("You win!");
-		      numFood += 5;
-         }
-      healthCheck = false; 
-      return "Thanks for playing!";
+      ArrayList<String> computerOptions = new ArrayList<String>();
+      computerOptions.add("rock");
+      computerOptions.add("paper");
+      computerOptions.add("scissor");
+         
+      String computerChoice = computerOptions.get((int)Math.random()*3); 
+         
+      if (playerChoice.compareTo(computerChoice) == 0){
+          System.out.println("You tied!");
       }
-        
+      if (playerChoice.equals("rock") && computerChoice.equals("paper")){
+	  System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+      }
+      if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
+	  System.out.println("You win!");
+	  numFood += 5;
+      }
+      if (playerChoice.equals("paper") && computerChoice.equals("rock")){
+	  System.out.println("You win!");
+	  numFood += 5;
+      }
+      if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
+	  System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+      }
+      if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
+	  System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+      }
+      if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
+	  System.out.println("You win!");
+          numFood += 5;
+      }
+         
+      if (healthCheck = false){ 
+         return "You died. Thanks for playing!";
+      }
+	      
       else{
          numFood = 0;
          return "You survived! You had enough food to give you energy to run away. Unfortunately, you are out of food, complete more challenges to resupply!";    
-         }
       }
+   }
     
    //gains wood, guess word game (ex: le_o_ is lemon)
    public String jungleHike(){ 
