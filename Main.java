@@ -13,30 +13,30 @@ public class Main{
     getResources();
     
     int day = 0;
-    while(healthCheck() && day < 10){
+    while(Island2.healthCheck() && day < 10){
       System.out.println("It is day: " + day);
       int count = 1; 
       while(count < 3){
         
         int x = (int) ((Math.random() * 3) + 1);
         if(x == 1){
-          wildAnimals();
+          Island2.wildAnimals();
           count ++;
-          if(!healthCheck()){
+          if(Island2.healthCheck() == false){
             System.out.println("You have died! Game Over! :( ");
           }
         }
         if(x == 2){
-          jungleHike();
+          Island2.jungleHike();
           count ++;
-          if(!healthCheck()){
+          if(Island2.healthCheck() == false){
             System.out.println("You have died! Game Over! :( ");
           }
         }
         if(x == 3){
-          posionBerries(); 
+          Island2.poisonBerries(); 
           count ++;
-           if(!healthCheck()){
+           if(Island2.healthCheck() == false){
             System.out.println("You have died! Game Over! :( ");
            }
         }
