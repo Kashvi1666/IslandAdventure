@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class Island2{
-   private int numDays;
-   private int dailyMethods; 
-	private int numFood;
-	private int numWater;
-	private int wood; 
-   private String name; 
+   public int numDays;
+   public int dailyMethods; 
+   public int numFood;
+   public int numWater;
+   public int wood; 
+   public String name; 
    
-   public Island2(String playerName, int days, int daily){
+   public Island2(String playerName){
       name = playerName; 
       numFood = (int)(Math.random()*15)+5; 
       numWater = (int)(Math.random()*15)+5; 
