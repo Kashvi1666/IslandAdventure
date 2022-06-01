@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-public class Main{
+public class Game{
   
   public static void main(String[]args) {
+
     
     Scanner myObj = new Scanner(System.in);
     System.out.println("Please enter your username: ");
@@ -10,7 +11,7 @@ public class Main{
     System.out.println("Welcome to our Island Game: " + username);
     System.out.println("In this game, you wil be faced with many obstacles and challenges that you will have to overcome. You will be given a random number of resources and have to make hard descisions to survive. If you live for 10 days, then you win! I wish you luck on your island adventure!");
     System.out.println("Below are the resources you have");
-    getResources();
+    Island2.getResources();
     Island2 island = new Island2(username);
     
     int day = 0;
@@ -49,8 +50,8 @@ public class Main{
       island.numFood = island.numFood - 2;
       island.numWater = island.numWater - 2;
 
-      if (findWater() <= 5){
-        findWater();
+      if (island.numWater <= 5){
+        Island2.findWater();
       }
 
       
@@ -60,14 +61,10 @@ public class Main{
     
   }
   
-  if(day = 10){
+  if(day == 10){
     System.out.println("A rescue boat has come! You have survived");
   }
    
   }
-  public static String getResources(){
-   
-   return "You have " + numFood + " food resources, " + numWater + " water resources, and " + wood + " wood resources";
-   
-  }
+
 }
