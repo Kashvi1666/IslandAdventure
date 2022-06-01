@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class Island2{
-   public int numDays;
-   public int dailyMethods; 
-   public int numFood;
-   public int numWater;
-   public int wood; 
-   public String name; 
+   private int numDays;
+   private int dailyMethods; 
+	private int numFood;
+	private int numWater;
+	private int wood; 
+   private String name; 
    
-   public Island2(String playerName){
+   public Island2(String playerName, int days, int daily){
       name = playerName; 
       numFood = (int)(Math.random()*15)+5; 
       numWater = (int)(Math.random()*15)+5; 
@@ -18,10 +18,10 @@ public class Island2{
    }
      
    public String wildAnimals(){
+      System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live. Play rock, paper, scissors to win 5 food.");
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
       String playerChoice = myObj.nextLine();
-      System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live. Play rock, paper, scissors to win 5 food.");
 	      
       ArrayList<String> computerOptions = new ArrayList<String>();
       computerOptions.add("rock");
@@ -55,7 +55,7 @@ public class Island2{
           numFood += 5;
       }
          
-      if (healthCheck = false){ 
+      if (healthCheck() == false){ 
          return "You died. Thanks for playing!";
       }
 	      
@@ -128,46 +128,46 @@ public class Island2{
 	    //remove word from array so its not repeated  
 
    public String poisonBerries(){ 
-	   System.out.println("Sorry! You have accidentally consumed toxic berries."); 
-	   System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
+      System.out.println("Sorry! You have accidentally consumed toxic berries."); 
+      System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
       int points = 0; 
          
       //question one
-	   System.out.println("Question 1: where do monkeys live? ");
-	   System.out.println("a) trees");
+      System.out.println("Question 1: where do monkeys live? ");
+      System.out.println("a) trees");
       System.out.println("b) inside houses");
-	   System.out.println("c) ground level");
+      System.out.println("c) ground level");
       System.out.println("d) nests");
-	   String answer = myObj.nextLine();
+      String answer = myObj.nextLine();
       if (answer.equals("a")){
-		   System.out.println("True! Next question"); 
-		   points++; 
-	   }		    
+          System.out.println("True! Next question"); 
+          points++; 
+      }		    
       else {
-		   System.out.println("False! Sorry. Next question.");
-	   }		    
+	  System.out.println("False! Sorry. Next question.");
+      }		    
       
       //question two
-	   System.out.println("Question 2: what color tree frog is most dangerous?");
-	   System.out.println("a) green");
+      System.out.println("Question 2: what color tree frog is most dangerous?");
+      System.out.println("a) green");
       System.out.println("b) black and yellow");
-	   System.out.println("c) orange spotted");
+      System.out.println("c) orange spotted");
       System.out.println("d) purple patched");	    
-	   String answer = myObj.nextLine();
-	   if (answer.equals("c")){
-		   System.out.println("True! Next question."); 
-		   points++;
-	   }		    
+      String answer = myObj.nextLine();
+      if (answer.equals("c")){
+	System.out.println("True! Next question."); 
+	points++;
+      }		    
       else{
-		   System.out.println("False! Sorry. Next question.");
-	   }		    
+	System.out.println("False! Sorry. Next question.");
+      }		    
       //question three
       System.out.println("Question 3: which plant is best for fevers?");
-	   System.out.println("a) lemon leaves");
+      System.out.println("a) lemon leaves");
       System.out.println("b) elderflower");
-	   System.out.println("c) red ivy");
+      System.out.println("c) red ivy");
       System.out.println("d) grass");	    
-	   String answer = myObj.nextLine();
+      String answer = myObj.nextLine();
 	   if (answer.equals("a")){
 		   System.out.println("True! Next question."); 
 		   points++;
