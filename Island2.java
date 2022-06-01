@@ -5,8 +5,6 @@ public class Island2{
    private int dailyMethods; 
 	private int numFood;
 	private int numWater;
-	private boolean blanket;
-	private boolean knife; 
 	private int wood; 
    private String name; 
    
@@ -14,8 +12,6 @@ public class Island2{
       name = playerName; 
       numFood = (int)(Math.random()*15)+5; 
       numWater = (int)(Math.random()*15)+5; 
-      blanket = true; 
-      knife = true; 
       wood = (int)(Math.random()*15)+5; 
       numDays = days;
       dailyMethods = daily;
@@ -264,7 +260,7 @@ public class Island2{
 	   String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
    } 
 		    				       
-   public boolean healthCheck(){
+   public static boolean healthCheck(){
 	   if ((numWater <= 0) || (numFood <= 0)){
 		return false;
 	   }
