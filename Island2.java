@@ -128,47 +128,48 @@ public class Island2{
 	    //remove word from array so its not repeated  
 
    public String poisonBerries(){ 
-      System.out.println("Sorry! You have accidentally consumed toxic berries."); 
-      System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
+	   System.out.println("Sorry! You have accidentally consumed poisonous berries."); 
+	   System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
       int points = 0; 
          
       //question one
-      System.out.println("Question 1: where do monkeys live? ");
-      System.out.println("a) trees");
+	   System.out.println("Question 1: where do monkeys live? ");
+	   System.out.println("a) trees");
       System.out.println("b) inside houses");
-      System.out.println("c) ground level");
+	   System.out.println("c) ground level");
       System.out.println("d) nests");
-      String answer = myObj.nextLine();
+	   String answer = myObj.nextLine();
+      System.out.println("answer: "); 
       if (answer.equals("a")){
-          System.out.println("True! Next question"); 
-          points++; 
-      }		    
+		   System.out.println("True! Next question"); 
+		   points++; 
+	   }		    
       else {
-	  System.out.println("False! Sorry. Next question.");
-      }		    
+		   System.out.println("False! Sorry. Next question.");
+	   }		    
       
       //question two
-      System.out.println("Question 2: what color tree frog is most dangerous?");
-      System.out.println("a) green");
+	   System.out.println("Question 2: what color tree frog is most dangerous?");
+	   System.out.println("a) green");
       System.out.println("b) black and yellow");
-      System.out.println("c) orange spotted");
+	   System.out.println("c) orange spotted");
       System.out.println("d) purple patched");	    
-      String answer = myObj.nextLine();
-      if (answer.equals("c")){
-	System.out.println("True! Next question."); 
-	points++;
-      }		    
+	   String answer2 = myObj.nextLine();
+	   if (answer2.equals("c")){
+		   System.out.println("True! Next question."); 
+		   points++;
+	   }		    
       else{
-	System.out.println("False! Sorry. Next question.");
-      }		    
+		   System.out.println("False! Sorry. Next question.");
+	   }		    
       //question three
       System.out.println("Question 3: which plant is best for fevers?");
-      System.out.println("a) lemon leaves");
+	   System.out.println("a) lemon leaves");
       System.out.println("b) elderflower");
-      System.out.println("c) red ivy");
+	   System.out.println("c) red ivy");
       System.out.println("d) grass");	    
-      String answer = myObj.nextLine();
-	   if (answer.equals("a")){
+	   String answer3 = myObj.nextLine();
+	   if (answer3.equals("a")){
 		   System.out.println("True! Next question."); 
 		   points++;
 	   }		    
@@ -182,8 +183,8 @@ public class Island2{
       System.out.println("b) salmon");
 	   System.out.println("c) orange roughy");
       System.out.println("d) rainbow trout");    
-	   String answer = myObj.nextLine();
-	   if (answer.equals("a")){
+	   String answer4 = myObj.nextLine();
+	   if (answer4.equals("a")){
 		   System.out.println("True! Next question."); 
 		   points++;
 	   }		    
@@ -197,8 +198,8 @@ public class Island2{
       System.out.println("b) stand still");
 	   System.out.println("c) eat it");
       System.out.println("d) step on it");	    
-	   String answer = myObj.nextLine();
-	   if (answer.equals("b")){
+	   String answer5 = myObj.nextLine();
+	   if (answer5.equals("b")){
 		   System.out.println("True! Next question"); 
 		   points++;
 	   }
@@ -212,8 +213,8 @@ public class Island2{
       System.out.println("b) underneath the island");
 	   System.out.println("c) in a cave");
       System.out.println("d) this island does not have treasure so the question is not applicable");		    
-	   String answer = myObj.nextLine();
-	   if (answer.equals("d")){
+	   String answer6 = myObj.nextLine();
+	   if (answer6.equals("d")){
 		   System.out.println("True! Good work!"); 
 		   points++;
 	   }		    
