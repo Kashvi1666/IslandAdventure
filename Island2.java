@@ -31,40 +31,43 @@ public class Island2{
       if (playerChoice.compareTo(computerChoice) == 0){
           System.out.println("You tied!");
           System.out.println("The computer chose " + computerChoice + ". ");
+	  numFood += 1; 
       }
       if (playerChoice.equals("rock") && computerChoice.equals("paper")){
          System.out.println("The computer chose " + computerChoice + ". ");
+	 numFood -= 2; 
+	 System.out.println("You still managed to run away, but you lost food."); 
       }
       if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
-	      System.out.println("You win!");
-	      numFood += 5;
+	 System.out.println("You win!");
+         numFood += 5;
          System.out.println("The computer chose " + computerChoice + ". ");
+         return "You survived! You had enough food to give you energy to run away. ";
       }
       if (playerChoice.equals("paper") && computerChoice.equals("rock")){
-	      System.out.println("You win!");
-	      numFood += 5;
+	 System.out.println("You win!");
+         numFood += 5;
          System.out.println("The computer chose " + computerChoice + ". ");
+         return "You survived! You had enough food to give you energy to run away. ";
       }
       if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
          System.out.println("The computer chose " + computerChoice + ". ");
+	 numFood -= 2; 
+	 System.out.println("You still managed to run away, but you lost food."); 
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
          System.out.println("The computer chose " + computerChoice + ". ");
+	 numFood -= 2; 
+	 System.out.println("You still managed to run away, but you lost food."); 
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
-	      System.out.println("You win!");
+	 System.out.println("You win!");
          numFood += 5;
          System.out.println("The computer chose " + computerChoice + ". ");
+         return "You survived! You had enough food to give you energy to run away. ";
       }
          
-      if (!healthCheck()){ 
-         return "You died. Thanks for playing!";
-      }
-	      
-      else{
-         numFood = 0;
-         return "You survived! You had enough food to give you energy to run away. Unfortunately, you are now out of food, complete more challenges to resupply!";    
-      }
+
    }
     
    //gains wood, guess word game (ex: le_o_ is lemon)
@@ -288,9 +291,7 @@ public class Island2{
 	if ((numWater <= 0) || (numFood <= 0)){
 		   return false;
 	   }
-	else{
-		return true; 
-	}
+	return true; 
    }  
    
    public static String getResources(){
