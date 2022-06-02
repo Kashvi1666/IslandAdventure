@@ -15,7 +15,7 @@ public class Game{
     System.out.println(Island2.getResources());
     
     int day = 1;
-    while(Island2.healthCheck() && day < 10){
+    while(Island2.healthCheck() && day < 11){
       System.out.println("It is day: " + day);
       int count = 1; 
       while(count < 3){
@@ -24,21 +24,21 @@ public class Game{
         if(x == 1){
           Island2.wildAnimals();
           count ++;
-          if(Island2.healthCheck() == false){
+          if(!Island2.healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
         if(x == 2){
           Island2.jungleHike();
           count ++;
-          if(Island2.healthCheck() == false){
+          if(!Island2.healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
         if(x == 3){
           Island2.poisonBerries(); 
           count ++;
-           if(Island2.healthCheck() == false){
+           if(!Island2.healthCheck()){
             System.out.println("You have died! Game Over! :( ");
            }
         }
