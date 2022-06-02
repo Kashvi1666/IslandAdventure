@@ -66,8 +66,7 @@ public class Island2{
          System.out.println("The computer chose " + computerChoice + ". ");
          return "You survived! You had enough food to give you energy to run away. ";
       }
-         
-
+       return "good game"; 
    }
     
    //gains wood, guess word game (ex: le_o_ is lemon)
