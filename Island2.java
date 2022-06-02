@@ -31,27 +31,34 @@ public class Island2{
          
       if (playerChoice.compareTo(computerChoice) == 0){
           System.out.println("You tied!");
+          System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("rock") && computerChoice.equals("paper")){
-	  System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+	      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+         System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
-	  System.out.println("You win!");
-	  numFood += 5;
+	      System.out.println("You win!");
+	      numFood += 5;
+         System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("paper") && computerChoice.equals("rock")){
-	  System.out.println("You win!");
-	  numFood += 5;
+	      System.out.println("You win!");
+	      numFood += 5;
+         System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
-	  System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+	      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+         System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
-	  System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+	      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
+         System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
-	  System.out.println("You win!");
-          numFood += 5;
+	      System.out.println("You win!");
+         numFood += 5;
+         System.out.println("The computer chose " + computerChoice + ". ");
       }
          
       if (healthCheck() == false){ 
@@ -67,6 +74,9 @@ public class Island2{
    //gains wood, guess word game (ex: le_o_ is lemon)
    public static void jungleHike(){ 
 	   //random array of words
+      System.out.println("You are going on a hike in the jungle, play this word guessing game to win resources!");
+      System.out.println("If you guess word that is partially typed out, you will win 10 food, 10 water, and 10 wood. If you guess incorrectly, you will lose 10 food, 10 water, and 10 wood. Good luck!");
+      
 	   ArrayList<String> guessingWords = new ArrayList<String>();
 		   guessingWords.add("s_n_");
    	   guessingWords.add("sand");
@@ -226,9 +236,9 @@ public class Island2{
 		   return "You passed! Congrats!";
 	   }
 	   else{
-		   return "You failed. Sorry."; 
 		   numFood -= 3; 
 		   numWater -= 3; 
+         return "You failed. Sorry."; 
 	   }
    }   
    		    
@@ -248,25 +258,26 @@ public class Island2{
 		      System.out.println("Guess again."); 
 	      } 
       } 
-      return "Sorry! You are out of guesses, you currently have " + numWater + " water."; 
-      
       if ((numWater <= 0) || (numFood <= 0)){
 		   return "You ran out of resources, you died.";
 	   }
+      
+      return "Sorry! You are out of guesses, you currently have " + numWater + " water."; 
    }  
 		    
    public static String findFood(int guess){
-	   System.out.println("You are running low on food! Play this number guessing game to replenish.");
-	   System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
 	   String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
+      System.out.println("You are running low on food! Play this number guessing game to replenish.");
+	   return "You have three guesses, pick any letter between a-k (abcdefghijk)";
    } 
 		    				       
    public static boolean healthCheck(){
 	   if ((numWater <= 0) || (numFood <= 0)){
-		return false;
+		   return false;
 	   }
 	return true; 
    }  
+   
    public static String getResources(){
 
       return "You have " + numFood + " food resources, " + numWater + " water resources, and " + wood + " wood resources";
