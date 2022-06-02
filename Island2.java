@@ -33,7 +33,6 @@ public class Island2{
           System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("rock") && computerChoice.equals("paper")){
-	      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
          System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
@@ -47,11 +46,9 @@ public class Island2{
          System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
-	      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
          System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
-	      System.out.println("You lost! You have died... You did not have enough food for energy to run from the wild animals.");
          System.out.println("The computer chose " + computerChoice + ". ");
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
@@ -269,7 +266,7 @@ public class Island2{
       System.out.println("You are running low on food! Play this number guessing game to replenish.");
       System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
       int guessNumber = (int) (Math.random()*15)+5; 
-      int guess = obj.nextInt();
+      guess = obj.nextInt();
       for (int i = 0; i <= 3; i++){
 	      if (guessNumber == guess){
 		      numWater += 5; 
@@ -288,7 +285,7 @@ public class Island2{
    } 
 		    				       
    public static boolean healthCheck(){
-	   if ((numWater <= 0) || (numFood <= 0)){
+	if ((numWater <= 0) || (numFood <= 0)){
 		   return false;
 	   }
 	return true; 
