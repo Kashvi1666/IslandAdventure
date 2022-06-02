@@ -65,7 +65,7 @@ public class Island2{
    }
     
    //gains wood, guess word game (ex: le_o_ is lemon)
-   public static void String jungleHike(){ 
+   public static void jungleHike(){ 
 	   //random array of words
 	   ArrayList<String> guessingWords = new ArrayList<String>();
 		   guessingWords.add("s_n_");
@@ -111,9 +111,9 @@ public class Island2{
  	      }
          else{
  		      System.out.print("Wrong. You lost food water and wood resources");
- 		      numFood -=10;
- 		     	numWater-=10;
- 		     	wood-=10;
+ 		      numFood -= 10;
+ 		     	numWater -= 10;
+ 		     	wood -= 10;
  		   }
       }
          
