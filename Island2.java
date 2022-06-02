@@ -265,9 +265,26 @@ public class Island2{
    }  
 		    
    public static String findFood(int guess){
-	   String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
+      Scanner obj = new Scanner(System.in);
       System.out.println("You are running low on food! Play this number guessing game to replenish.");
-	   return "You have three guesses, pick any letter between a-k (abcdefghijk)";
+      System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
+      int guessNumber = (int) (Math.random()*15)+5; 
+      int guess = obj.nextInt();
+      for (int i = 0; i <= 3; i++){
+	      if (guessNumber == guess){
+		      numWater += 5; 
+		      return "Nice job! You guessed right! You have " + numFood + " food.";
+	      }
+	      else {
+		      System.out.println("Guess again."); 
+	      } 
+      } 
+      if ((numWater <= 0) || (numFood <= 0)){
+		   return "You ran out of resources, you died.";
+	   }
+      
+      return "Sorry! You are out of guesses, you currently have " + numFood + " food."; 
+
    } 
 		    				       
    public static boolean healthCheck(){
