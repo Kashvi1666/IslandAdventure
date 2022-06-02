@@ -84,23 +84,23 @@ public class Island2{
          x = x * 2;  
           
          if (x == 1){ 
-	         wordToGuess = guessingWords[2];
+	         wordToGuess = guessingWords.get(2);
 	      }
 	      if (x == 3){ 
-            wordToGuess = guessingWords[4];
+            wordToGuess = guessingWords.get(4);
 	      }
 	      if (x == 5){ 
-	         wordToGuess = guessingWords[6];
+	         wordToGuess = guessingWords.get(6);
 	      }
 	      if (x == 7){ 
-	         wordToGuess = guessingWords[8];
+	         wordToGuess = guessingWords.get(8);
 	      }
 	      if (x == 9){ 
-	         wordToGuess = guessingWords[10];
+	         wordToGuess = guessingWords.get(10);
 	      }
 	
          Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-         System.out.print(guessingWords[x]);
+         System.out.print(guessingWords.get(x));
          String userInput = myObj.nextLine(); 
  	      	
          if (userInput.equals(wordToGuess)){
