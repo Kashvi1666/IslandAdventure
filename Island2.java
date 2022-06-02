@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class Island2{
-   public int numDays;
-   public int dailyMethods; 
-   public int numFood;
-   public int numWater;
-   public int wood; 
+   public static int numDays;
+   public static int dailyMethods; 
+   public static int numFood;
+   public static int numWater;
+   public static int wood; 
    public String name; 
    
    public Island2(String playerName){
@@ -16,7 +16,7 @@ public class Island2{
 
    }
      
-   public String wildAnimals(){
+   public static String wildAnimals(){
       System.out.println("Oh no! Wild animals are chasing you! If you have enough food, you will live. Play rock, paper, scissors to win 5 food.");
       Scanner myObj = new Scanner(System.in);
       System.out.println("Shoot: ");
@@ -65,7 +65,7 @@ public class Island2{
    }
     
    //gains wood, guess word game (ex: le_o_ is lemon)
-   public String jungleHike(){ 
+   public static String jungleHike(){ 
 	   //random array of words
 	   ArrayList<String> guessingWords = new ArrayList<String>();
 		   guessingWords.add("s_n_");
@@ -81,26 +81,26 @@ public class Island2{
    
          String wordToGuess;
 	      int x = (int)(Math.random() * 9);
-         int x = x * 2;  
+         x = x * 2;  
           
          if (x == 1){ 
-	         wordToGuess = array[2];
+	         wordToGuess = guessingWords[2];
 	      }
 	      if (x == 3){ 
-            wordToGuess = array[4];
+            wordToGuess = guessingWords[4];
 	      }
 	      if (x == 5){ 
-	         wordToGuess = array[6];
+	         wordToGuess = guessingWords[6];
 	      }
 	      if (x == 7){ 
-	         wordToGuess = array[8];
+	         wordToGuess = guessingWords[8];
 	      }
 	      if (x == 9){ 
-	         wordToGuess = array[10];
+	         wordToGuess = guessingWords[10];
 	      }
 	
          Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-         System.out.print(array[x]);
+         System.out.print(guessingWords[x]);
          String userInput = myObj.nextLine(); 
  	      	
          if (userInput.equals(wordToGuess)){
@@ -126,7 +126,8 @@ public class Island2{
 	    //print out, make them guess using string.equals in a for loop for three times 
 	    //remove word from array so its not repeated  
 
-   public String poisonBerries(){ 
+   public static String poisonBerries(){
+      Scanner question = new Scanner(System.in);
 	   System.out.println("Sorry! You have accidentally consumed poisonous berries."); 
 	   System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
       int points = 0; 
@@ -137,7 +138,7 @@ public class Island2{
       System.out.println("b) inside houses");
 	   System.out.println("c) ground level");
       System.out.println("d) nests");
-	   String answer = myObj.nextLine();
+	   String answer = question.nextLine();
       System.out.println("answer: "); 
       if (answer.equals("a")){
 		   System.out.println("True! Next question"); 
@@ -153,7 +154,7 @@ public class Island2{
       System.out.println("b) black and yellow");
 	   System.out.println("c) orange spotted");
       System.out.println("d) purple patched");	    
-	   String answer2 = myObj.nextLine();
+	   String answer2 = question.nextLine();
 	   if (answer2.equals("c")){
 		   System.out.println("True! Next question."); 
 		   points++;
@@ -167,7 +168,7 @@ public class Island2{
       System.out.println("b) elderflower");
 	   System.out.println("c) red ivy");
       System.out.println("d) grass");	    
-	   String answer3 = myObj.nextLine();
+	   String answer3 = question.nextLine();
 	   if (answer3.equals("a")){
 		   System.out.println("True! Next question."); 
 		   points++;
@@ -182,7 +183,7 @@ public class Island2{
       System.out.println("b) salmon");
 	   System.out.println("c) orange roughy");
       System.out.println("d) rainbow trout");    
-	   String answer4 = myObj.nextLine();
+	   String answer4 = question.nextLine();
 	   if (answer4.equals("a")){
 		   System.out.println("True! Next question."); 
 		   points++;
@@ -197,7 +198,7 @@ public class Island2{
       System.out.println("b) stand still");
 	   System.out.println("c) eat it");
       System.out.println("d) step on it");	    
-	   String answer5 = myObj.nextLine();
+	   String answer5 = question.nextLine();
 	   if (answer5.equals("b")){
 		   System.out.println("True! Next question"); 
 		   points++;
@@ -212,7 +213,7 @@ public class Island2{
       System.out.println("b) underneath the island");
 	   System.out.println("c) in a cave");
       System.out.println("d) this island does not have treasure so the question is not applicable");		    
-	   String answer6 = myObj.nextLine();
+	   String answer6 = question.nextLine();
 	   if (answer6.equals("d")){
 		   System.out.println("True! Good work!"); 
 		   points++;
@@ -231,12 +232,13 @@ public class Island2{
 	   }
    }   
    		    
-   public String findWater(int guess){
+   public static String findWater(){
       //in the dayTracker method, at the end of the day check water resources. call this method if user is low
+      Scanner obj = new Scanner(System.in);
       System.out.println("You are running low on water! Play this number guessing game to replenish.");
       System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
-      int guessNumber = (Math.random()*15)+5; 
-      int guess = myObj.nextLine();
+      int guessNumber = (int) (Math.random()*15)+5; 
+      int guess = obj.nextInt();
       for (int i = 0; i <= 3; i++){
 	      if (guessNumber == guess){
 		      numWater += 5; 
@@ -253,7 +255,7 @@ public class Island2{
 	   }
    }  
 		    
-   public String findFood(int guess){
+   public static String findFood(int guess){
 	   System.out.println("You are running low on food! Play this number guessing game to replenish.");
 	   System.out.println("You have three guesses, pick any letter between a-k (abcdefghijk)");
 	   String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"}; 
@@ -264,5 +266,10 @@ public class Island2{
 		return false;
 	   }
 	return true; 
-   }   
+   }  
+   public static String getResources(){
+
+      return "You have " + numFood + " food resources, " + numWater + " water resources, and " + wood + " wood resources";
+
+  } 
 }
