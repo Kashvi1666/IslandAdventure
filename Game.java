@@ -11,10 +11,10 @@ public class Game{
     System.out.println("Welcome to our Island Game: " + username);
     System.out.println("In this game, you wil be faced with many obstacles and challenges that you will have to overcome. You will be given a random number of resources and have to make hard descisions to survive. If you live for 10 days, then you win! I wish you luck on your island adventure!");
     System.out.println("Below are the resources you have");
-    Island2.getResources();
     Island2 island = new Island2(username);
+    System.out.println(Island2.getResources());
     
-    int day = 0;
+    int day = 1;
     while(Island2.healthCheck() && day < 10){
       System.out.println("It is day: " + day);
       int count = 1; 
