@@ -288,7 +288,9 @@ public class Island2{
 	if ((numWater <= 0) || (numFood <= 0)){
 		   return false;
 	   }
-	return true; 
+	else{
+		return true; 
+	}
    }  
    
    public static String getResources(){
