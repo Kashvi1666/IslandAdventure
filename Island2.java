@@ -31,40 +31,41 @@ public class Island2{
       if (playerChoice.compareTo(computerChoice) == 0){
           System.out.println("You tied!");
           System.out.println("The computer chose " + computerChoice + ". ");
+	  System.out.println("You have gained 1 food resource");
 	  numFood += 1; 
       }
       if (playerChoice.equals("rock") && computerChoice.equals("paper")){
          System.out.println("The computer chose " + computerChoice + ". ");
 	 numFood -= 2; 
-	 System.out.println("You still managed to run away, but you lost food."); 
+	 System.out.println("You still managed to run away, but you lost 2 food resources."); 
       }
       if (playerChoice.equals("rock") && computerChoice.equals("scissor")){
 	 System.out.println("You win!");
          numFood += 5;
          System.out.println("The computer chose " + computerChoice + ". ");
-         return "You survived! You had enough food to give you energy to run away. ";
+         return "You survived! You had enough food to give you energy to run away. You gained 5 food resources.";
       }
       if (playerChoice.equals("paper") && computerChoice.equals("rock")){
 	 System.out.println("You win!");
          numFood += 5;
          System.out.println("The computer chose " + computerChoice + ". ");
-         return "You survived! You had enough food to give you energy to run away. ";
+         return "You survived! You had enough food to give you energy to run away. You gained 5 food resources. ";
       }
       if (playerChoice.equals("paper") && computerChoice.equals("scissor")){
          System.out.println("The computer chose " + computerChoice + ". ");
 	 numFood -= 2; 
-	 System.out.println("You still managed to run away, but you lost food."); 
+	 System.out.println("You still managed to run away, but you lost food. You lost two food resources."); 
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("rock")){
          System.out.println("The computer chose " + computerChoice + ". ");
 	 numFood -= 2; 
-	 System.out.println("You still managed to run away, but you lost food."); 
+	 System.out.println("You still managed to run away, but you lost food. You lost two food resources."); 
       }
       if (playerChoice.equals("scissor") && computerChoice.equals("paper")){
 	 System.out.println("You win!");
          numFood += 5;
          System.out.println("The computer chose " + computerChoice + ". ");
-         return "You survived! You had enough food to give you energy to run away. ";
+         return "You survived! You had enough food to give you energy to run away. You gained 5 food resources. ";
       }
        return "good game"; 
    }
