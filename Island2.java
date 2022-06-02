@@ -13,7 +13,6 @@ public class Island2{
       numFood = (int)(Math.random()*15)+5; 
       numWater = (int)(Math.random()*15)+5; 
       wood = (int)(Math.random()*15)+5; 
-
    }
      
    public static String wildAnimals(){
@@ -61,13 +60,13 @@ public class Island2{
          System.out.println("The computer chose " + computerChoice + ". ");
       }
          
-      if (healthCheck() == false){ 
+      if (!healthCheck()){ 
          return "You died. Thanks for playing!";
       }
 	      
       else{
          numFood = 0;
-         return "You survived! You had enough food to give you energy to run away. Unfortunately, you are out of food, complete more challenges to resupply!";    
+         return "You survived! You had enough food to give you energy to run away. Unfortunately, you are now out of food, complete more challenges to resupply!";    
       }
    }
     
