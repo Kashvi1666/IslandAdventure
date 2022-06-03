@@ -5,9 +5,11 @@ Welcome to your Island Adventure! A game that tests your ability to survive in t
 
 How to Play
 - copy and paste Island2.java and Game.java into your IDE as seperate files
-Island2.java contains the biggest portion of the code, Game.java contains the main method.
+*Island2.java contains the biggest portion of the code, Game.java contains the main method.
 - disregard the ProjectPlan and ProjectTask files in the repository, those were just for reference
-- run Game.java and enjoy!
+- run Game.java
+- read all the instructions that are displayed after you run the code, they're essential to understanding the obstacles and your progress in the game
+- enjoy!
 
 Lots of Love, 
 Noni Chandrakant (E), Sylvia Lou (E), Kashvi Swami (F), Sophia Samji (F), Parie Kumar (F)
