@@ -22,29 +22,29 @@ public class Game{
         
         int x = (int) ((Math.random() * 3) + 1);
         if(x == 1){
-          Island2.wildAnimals();
           count ++;
+          Island2.wildAnimals();
           if(!Island2.healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
         if(x == 2){
-          Island2.jungleHike();
           count ++;
+          Island2.jungleHike();
           if(!Island2.healthCheck()){
             System.out.println("You have died! Game Over! :( ");
           }
         }
         if(x == 3){
-          Island2.poisonBerries(); 
           count ++;
+          Island2.poisonBerries(); 
            if(!Island2.healthCheck()){
             System.out.println("You have died! Game Over! :( ");
            }
         }
 
      }
-     if (count == 2){
+     if (count == 3){
       day ++; 
       System.out.println("The day has ended");
       island.numFood = island.numFood - 2;
