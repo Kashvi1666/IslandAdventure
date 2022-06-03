@@ -141,7 +141,7 @@ public class Island2{
 
    public static String poisonBerries(){
       Scanner question = new Scanner(System.in);
-	   System.out.println("Sorry! You have accidentally consumed poisonous berries."); 
+	   System.out.println("You have accidentally consumed poisonous berries."); 
 	   System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
       int points = 0; 
          
@@ -158,7 +158,7 @@ public class Island2{
 		   points++; 
 	   }		    
       else {
-		   System.out.println("False! Sorry. Next question.");
+		   System.out.println("False! Next question.");
 	   }		    
       
       //question two
@@ -173,7 +173,7 @@ public class Island2{
 		   points++;
 	   }		    
       else{
-		   System.out.println("False! Sorry. Next question.");
+		   System.out.println("False! Next question.");
 	   }		    
       //question three
       System.out.println("Question 3: which plant is best for fevers?");
@@ -187,7 +187,7 @@ public class Island2{
 		   points++;
 	   }		    
       else{
-		   System.out.println("False! Sorry. Next question.");
+		   System.out.println("False! Next question.");
 	   }		    
       
       //question four
@@ -202,7 +202,7 @@ public class Island2{
 		   points++;
 	   }		    
       else {
-		   System.out.println("False! Sorry. Next question.");
+		   System.out.println("False! Next question.");
 	   }		    
 	   
       //question five
@@ -217,7 +217,7 @@ public class Island2{
 		   points++;
 	   }
       else{
-		   System.out.println("False! Sorry. Next question.");
+		   System.out.println("False! Next question.");
 	   }
 	   
       //question six
@@ -232,7 +232,7 @@ public class Island2{
 		   points++;
 	   }		    
       else {
-		   System.out.println("False! Sorry.");
+		   System.out.println("False!");
 	   }
       
 	   if (points >= 4){
@@ -241,7 +241,7 @@ public class Island2{
 	   else{
 		   numFood -= 3; 
 		   numWater -= 3; 
-         return "You failed. Sorry."; 
+         return "You failed."; 
 	   }
    }   
    		    
@@ -265,7 +265,7 @@ public class Island2{
 		   return "You ran out of resources, you died.";
 	   }
       
-      return "Sorry! You are out of guesses, you currently have " + numWater + " water."; 
+      return "You are out of guesses, you currently have " + numWater + " water."; 
    }  
 		    
    public static String findFood(int guess){
@@ -287,7 +287,7 @@ public class Island2{
 		   return "You ran out of resources, you died.";
 	   }
       
-      return "Sorry! You are out of guesses, you currently have " + numFood + " food."; 
+      return "You are out of guesses, you currently have " + numFood + " food."; 
 
    } 
 		    				       
