@@ -296,7 +296,8 @@ public class Island2{
 		      numWater -= 3; 
             return "You failed.";
 	      }		
-	   }		    
+	   }
+	 return "nice";
    }  
    		    
    public static String findWater(){
