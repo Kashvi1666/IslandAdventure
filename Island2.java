@@ -144,7 +144,7 @@ public class Island2{
 	   System.out.println("You have accidentally consumed poisonous berries."); 
 	   System.out.println("Play this trivia to get the antidote, or else lose food and water!");
       
-      int questionNum = (int)(Math.random()*6)+1; 
+      int questionNum = (int)(Math.random()*8)+1; 
       
       if (questionNum == 1){
       
@@ -275,7 +275,31 @@ public class Island2{
       
       if (questionNum == 6){
       
-         System.out.println("Question 5: what should you do if you see a snake?");
+         System.out.println("which shark is the friendlist?");
+	      System.out.println("a) tiger shark");
+         System.out.println("b) great white shark");
+	      System.out.println("c) leopard shark");
+         System.out.println("d) bull shark");
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
+         
+         if (answer.equals("c")){
+		      System.out.println("True!"); 
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won.";
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }
+       if (questionNum == 7){
+      
+         System.out.println("what should you do if you see a snake?");
 	      System.out.println("a) run backwards");
          System.out.println("b) stand still");
 	      System.out.println("c) eat it");
@@ -284,6 +308,32 @@ public class Island2{
          System.out.println("answer: "); 
          
          if (answer.equals("b")){
+		      System.out.println("True!"); 
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won.";
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }
+	 return "nice";
+	
+      if (questionNum == 8){
+      
+         System.out.println("what should you do if you see a snake?");
+	      System.out.println("a) run backwards");
+         System.out.println("b) stand still");
+	      System.out.println("c) eat it");
+         System.out.println("d) step on it");
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
+         
+         if (answer.equals("d")){
 		      System.out.println("True!"); 
             numFood += 2; 
 		      numWater += 2; 
