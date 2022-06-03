@@ -77,49 +77,53 @@ public class Island2{
       System.out.println("If you guess word that is partially typed out, you will win 10 food, 10 water, and 10 wood. If you guess incorrectly, you will lose 10 food, 10 water, and 10 wood. Good luck!");
       
 	   ArrayList<String> guessingWords = new ArrayList<String>();
-		   guessingWords.add("s_n_");
+		   guessingWords.add("s_n_ ");
    	   guessingWords.add("sand");
-    	   guessingWords.add("_m_re_la");
+    	   guessingWords.add("_m_re_la ");
 	    	guessingWords.add("umbrella");
-	    	guessingWords.add("pa_ay_");
+	    	guessingWords.add("pa_ay_ ");
 	    	guessingWords.add("papaya");
-	      guessingWords.add("tr_e");
+	      guessingWords.add("tr_e ");
 	      guessingWords.add("tree");
-	    	guessingWords.add("b_a_h");
+	    	guessingWords.add("b_a_h ");
 	      guessingWords.add("beach");
-   
+ 	      	
          String wordToGuess = " ";
-	      int x = (int)(Math.random() * 9);
-         x = x * 2;  
+	      int x = (int)((Math.random() * 5) + 1);  
           
          if (x == 1){ 
-	         wordToGuess = guessingWords.get(2);
+	         wordToGuess = guessingWords.get(0);
+            x = 0;
+	      }
+	      if (x == 2){ 
+            wordToGuess = guessingWords.get(2);
+            x = 2;
 	      }
 	      if (x == 3){ 
-            wordToGuess = guessingWords.get(4);
+	         wordToGuess = guessingWords.get(4);
+            x = 4;
+	      }
+	      if (x == 4){ 
+	         wordToGuess = guessingWords.get(6);
+            x = 6;
 	      }
 	      if (x == 5){ 
-	         wordToGuess = guessingWords.get(6);
-	      }
-	      if (x == 7){ 
 	         wordToGuess = guessingWords.get(8);
-	      }
-	      if (x == 9){ 
-	         wordToGuess = guessingWords.get(10);
+            x = 8;
 	      }
 	
          Scanner myObj = new Scanner(System.in);  // Create a Scanner object
          System.out.print(guessingWords.get(x));
          String userInput = myObj.nextLine(); 
  	      	
-         if (userInput.equals(wordToGuess)){
+         if (userInput.equals(guessingWords.get(x + 1))){
  	         System.out.println("Good job! You got it right! You get more food, water and wood!");
  	      	numFood += 10;
  	      	numWater += 10;
  	      	wood += 10;
  	      }
          else{
- 		      System.out.print("Wrong. You lost food water and wood resources");
+ 		      System.out.println("Wrong. You lost food water and wood resources.");
  		      numFood -= 10;
  		     	numWater -= 10;
  		     	wood -= 10;
