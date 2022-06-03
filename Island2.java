@@ -142,108 +142,162 @@ public class Island2{
    public static String poisonBerries(){
       Scanner question = new Scanner(System.in);
 	   System.out.println("You have accidentally consumed poisonous berries."); 
-	   System.out.println("Play this trivia and get 4 out of 6 questions right to get the antidote, or else lose food and water!");
-      int points = 0; 
+	   System.out.println("Play this trivia to get the antidote, or else lose food and water!");
+      
+      question = (int)(Math.random()*6)+1; 
+      
+      if (question == 1){
+      
+         System.out.println("where do monkeys live? ");
+	      System.out.println("a) trees");
+         System.out.println("b) inside houses");
+	      System.out.println("c) ground level");
+         System.out.println("d) nests");
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
          
-      //question one
-	   System.out.println("Question 1: where do monkeys live? ");
-	   System.out.println("a) trees");
-      System.out.println("b) inside houses");
-	   System.out.println("c) ground level");
-      System.out.println("d) nests");
-	   String answer = question.nextLine();
-      System.out.println("answer: "); 
-      if (answer.equals("a")){
-		   System.out.println("True! Next question"); 
-		   points++; 
-	   }		    
-      else {
-		   System.out.println("False! Next question.");
-	   }		    
+         if (answer.equals("a")){
+		      System.out.println("True! ");
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won."; 
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }	
       
-      //question two
-	   System.out.println("Question 2: what color tree frog is most dangerous?");
-	   System.out.println("a) green");
-      System.out.println("b) black and yellow");
-	   System.out.println("c) orange spotted");
-      System.out.println("d) purple patched");	    
-	   String answer2 = question.nextLine();
-	   if (answer2.equals("c")){
-		   System.out.println("True! Next question."); 
-		   points++;
-	   }		    
-      else{
-		   System.out.println("False! Next question.");
-	   }		    
-      //question three
-      System.out.println("Question 3: which plant is best for fevers?");
-	   System.out.println("a) lemon leaves");
-      System.out.println("b) elderflower");
-	   System.out.println("c) red ivy");
-      System.out.println("d) grass");	    
-	   String answer3 = question.nextLine();
-	   if (answer3.equals("a")){
-		   System.out.println("True! Next question."); 
-		   points++;
-	   }		    
-      else{
-		   System.out.println("False! Next question.");
-	   }		    
+      if (question == 2){
       
-      //question four
-      System.out.println("Question 4: which edible fish is found close to shore?");
-	   System.out.println("a) rockfish");
-      System.out.println("b) salmon");
-	   System.out.println("c) orange roughy");
-      System.out.println("d) rainbow trout");    
-	   String answer4 = question.nextLine();
-	   if (answer4.equals("a")){
-		   System.out.println("True! Next question."); 
-		   points++;
-	   }		    
-      else {
-		   System.out.println("False! Next question.");
-	   }		    
-	   
-      //question five
-      System.out.println("Question 5: what should you do if you see a snake?");
-	   System.out.println("a) run backwards");
-      System.out.println("b) stand still");
-	   System.out.println("c) eat it");
-      System.out.println("d) step on it");	    
-	   String answer5 = question.nextLine();
-	   if (answer5.equals("b")){
-		   System.out.println("True! Next question"); 
-		   points++;
-	   }
-      else{
-		   System.out.println("False! Next question.");
-	   }
-	   
-      //question six
-      System.out.println("Question 6: where is treasure usually hidden?");
-	   System.out.println("a) on the beach");
-      System.out.println("b) underneath the island");
-	   System.out.println("c) in a cave");
-      System.out.println("d) this island does not have treasure so the question is not applicable");		    
-	   String answer6 = question.nextLine();
-	   if (answer6.equals("d")){
-		   System.out.println("True! Good work!"); 
-		   points++;
-	   }		    
-      else {
-		   System.out.println("False!");
+         System.out.println("what color tree frog is most dangerous?");
+	      System.out.println("a) green");
+         System.out.println("b) black and yellow");
+	      System.out.println("c) orange spotted");
+         System.out.println("d) purple patched");	    
+         String answer = question.nextLine();
+         System.out.println("answer: ");
+         
+         if (answer.equals("c")){
+		      System.out.println("True!");
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won.";  
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
 	   }
       
-	   if (points >= 4){
-		   return "You passed! Congrats!";
-	   }
-	   else{
-		   numFood -= 3; 
-		   numWater -= 3; 
-         return "You failed."; 
-	   }
-   }   
+      if (question == 3){
+      
+         System.out.println("where is treasure usually hidden?");
+	      System.out.println("a) on the beach");
+         System.out.println("b) underneath the island");
+	      System.out.println("c) in a cave");
+         System.out.println("d) this island does not have treasure so the question is not applicable");		    
+
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
+         
+         if (answer.equals("d")){
+		      System.out.println("True!"); 
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won."; 
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }	
+      
+      if (question == 4){
+      
+         System.out.println("which plant is best for fevers?");
+	      System.out.println("a) lemon leaves");
+         System.out.println("b) elderflower");
+	      System.out.println("c) red ivy");
+         System.out.println("d) grass");
+         
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
+         
+         if (answer.equals("b")){
+		      System.out.println("True!"); 
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won."; 
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }	
+      
+      if (question == 5){
+      
+         System.out.println("which edible fish is found close to shore?");
+	      System.out.println("a) rockfish");
+         System.out.println("b) salmon");
+	      System.out.println("c) orange roughy");
+         System.out.println("d) rainbow trout");
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
+         
+         if (answer.equals("a")){
+		      System.out.println("True!");
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won"; 
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }	
+      
+      if (question == 6){
+      
+         System.out.println("Question 5: what should you do if you see a snake?");
+	      System.out.println("a) run backwards");
+         System.out.println("b) stand still");
+	      System.out.println("c) eat it");
+         System.out.println("d) step on it");
+	      String answer = question.nextLine();
+         System.out.println("answer: "); 
+         
+         if (answer.equals("b")){
+		      System.out.println("True!"); 
+            numFood += 2; 
+		      numWater += 2; 
+            return "You won.";
+         }
+         
+         else {
+		      System.out.println("False!");
+            numFood -= 3; 
+		      numWater -= 3; 
+            return "You failed.";
+	      }		
+	   }		    
+   } 
    		    
    public static String findWater(){
       //in the dayTracker method, at the end of the day check water resources. call this method if user is low
