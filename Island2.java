@@ -280,7 +280,14 @@ public class Island2{
 		      return "Nice job! You guessed right! You have " + numFood + " food.";
 	      }
 	      else {
-		      System.out.println("Guess again."); 
+		      System.out.println("Guess again.");
+                      if(guess > guessNumber){
+                      	System.out.println("Too high");
+                      }
+                      else{
+                      	System.out.println("Too low");
+                      }
+	       
 	      } 
       } 
       if ((numWater <= 0) || (numFood <= 0)){
