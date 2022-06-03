@@ -26,7 +26,7 @@ public class Island2{
       computerOptions.add("paper");
       computerOptions.add("scissor");
          
-      String computerChoice = computerOptions.get((int)Math.random()*3); 
+      String computerChoice = computerOptions.get((int) (Math.random()*3)); 
          
       if (playerChoice.compareTo(computerChoice) == 0){
           System.out.println("You tied!");
