@@ -17,6 +17,8 @@ public class Game{
     int day = 1;
     while(Island2.healthCheck() && day < 11){
       System.out.println("It is day: " + day);
+      System.out.println("Below are the resources you have");
+      System.out.println(Island2.getResources());
       int count = 1; 
       while(count < 3){
         
