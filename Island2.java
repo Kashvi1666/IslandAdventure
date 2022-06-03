@@ -251,8 +251,8 @@ public class Island2{
       System.out.println("You are running low on water! Play this number guessing game to replenish.");
       System.out.println("You have three guesses, pick any whole number between 1 & 20 inclusive."); 
       int guessNumber = (int) (Math.random()*15)+5; 
-      int guess = obj.nextInt();
       for (int i = 0; i <= 3; i++){
+	      int guess = obj.nextInt();
 	      if (guessNumber == guess){
 		      numWater += 5; 
 		      return "Nice job! You guessed right! You have " + numWater + " water.";
