@@ -144,9 +144,9 @@ public class Island2{
 	   System.out.println("You have accidentally consumed poisonous berries."); 
 	   System.out.println("Play this trivia to get the antidote, or else lose food and water!");
       
-      question = (int)(Math.random()*6)+1; 
+      questionNum = (int)(Math.random()*6)+1; 
       
-      if (question == 1){
+      if (questionNum = 1){
       
          System.out.println("where do monkeys live? ");
 	      System.out.println("a) trees");
@@ -171,7 +171,7 @@ public class Island2{
 	      }		
 	   }	
       
-      if (question == 2){
+      if (questionNum = 2){
       
          System.out.println("what color tree frog is most dangerous?");
 	      System.out.println("a) green");
@@ -196,7 +196,7 @@ public class Island2{
 	      }		
 	   }
       
-      if (question == 3){
+      if (questionNum = 3){
       
          System.out.println("where is treasure usually hidden?");
 	      System.out.println("a) on the beach");
@@ -222,7 +222,7 @@ public class Island2{
 	      }		
 	   }	
       
-      if (question == 4){
+      if (questionNum = 4){
       
          System.out.println("which plant is best for fevers?");
 	      System.out.println("a) lemon leaves");
@@ -248,7 +248,7 @@ public class Island2{
 	      }		
 	   }	
       
-      if (question == 5){
+      if (questionNum = 5){
       
          System.out.println("which edible fish is found close to shore?");
 	      System.out.println("a) rockfish");
@@ -273,7 +273,7 @@ public class Island2{
 	      }		
 	   }	
       
-      if (question == 6){
+      if (questionNum = 6){
       
          System.out.println("Question 5: what should you do if you see a snake?");
 	      System.out.println("a) run backwards");
@@ -297,7 +297,7 @@ public class Island2{
             return "You failed.";
 	      }		
 	   }		    
-   } 
+   }  
    		    
    public static String findWater(){
       //in the dayTracker method, at the end of the day check water resources. call this method if user is low
